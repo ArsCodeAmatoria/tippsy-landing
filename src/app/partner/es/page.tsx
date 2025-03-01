@@ -277,7 +277,7 @@ export default function PartnerPageES() {
                       </div>
                       
                       <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 p-4 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
-                        <div className="font-bold text-slate-800 dark:text-slate-100 mb-1">Q3 2024: Seguridad y Autenticación</div>
+                        <div className="font-bold text-slate-800 dark:text-slate-100 mb-1">Q3: Seguridad y Autenticación</div>
                         <div className="text-sm text-slate-600 dark:text-slate-300">
                           <ul className="list-disc pl-5 space-y-1 mt-1">
                             <li>Implementar Identidad Descentralizada Polkadot (DID) para autenticación segura de usuarios</li>
@@ -295,7 +295,7 @@ export default function PartnerPageES() {
                       </div>
                       
                       <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-950/30 dark:to-amber-900/30 p-4 rounded-xl shadow-sm border border-amber-200 dark:border-amber-800/30">
-                        <div className="font-bold text-slate-800 dark:text-slate-100 mb-1">Q4 2024: Integración de IA y Descubrimiento Social</div>
+                        <div className="font-bold text-slate-800 dark:text-slate-100 mb-1">Q4: Integración de IA y Descubrimiento Social</div>
                         <div className="text-sm text-slate-600 dark:text-slate-300">
                           <ul className="list-disc pl-5 space-y-1 mt-1">
                             <li>Integrar Llama AI para recomendaciones personalizadas de locales</li>
@@ -313,7 +313,7 @@ export default function PartnerPageES() {
                       </div>
                       
                       <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gradient-to-br from-violet-50 to-violet-100 dark:from-violet-950/30 dark:to-violet-900/30 p-4 rounded-xl shadow-sm border border-violet-200 dark:border-violet-800/30">
-                        <div className="font-bold text-slate-800 dark:text-slate-100 mb-1">Q1 2025: Aplicaciones Móviles y Asociaciones con Locales</div>
+                        <div className="font-bold text-slate-800 dark:text-slate-100 mb-1">Q1: Aplicaciones Móviles y Asociaciones con Locales</div>
                         <div className="text-sm text-slate-600 dark:text-slate-300">
                           <ul className="list-disc pl-5 space-y-1 mt-1">
                             <li>Lanzar aplicaciones móviles nativas para iOS y Android</li>
@@ -331,7 +331,7 @@ export default function PartnerPageES() {
                       </div>
                       
                       <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950/30 dark:to-green-900/30 p-4 rounded-xl shadow-sm border border-green-200 dark:border-green-800/30">
-                        <div className="font-bold text-slate-800 dark:text-slate-100 mb-1">Q2 2025: Expansión Global y Asociaciones con Marcas</div>
+                        <div className="font-bold text-slate-800 dark:text-slate-100 mb-1">Q2: Expansión Global y Asociaciones con Marcas</div>
                         <div className="text-sm text-slate-600 dark:text-slate-300">
                           <ul className="list-disc pl-5 space-y-1 mt-1">
                             <li>Expandir a los principales mercados internacionales</li>
