@@ -51,6 +51,26 @@ export function Contact() {
     }
   }
 
+  // Render the age verification label with a link to Terms of Service
+  const renderAgeVerificationLabel = () => {
+    const text = t("contact.ageVerification");
+    const parts = text.split("Terms of Service");
+    
+    if (parts.length === 2) {
+      return (
+        <>
+          {parts[0]}
+          <Link href="/terms" className="text-primary hover:underline">
+            Terms of Service
+          </Link>
+          {parts[1]}
+        </>
+      );
+    }
+    
+    return text;
+  };
+
   return (
     <section id="contact" className="py-16 md:py-24 lg:py-32">
       <div className="container mx-auto px-6 md:px-8">
@@ -115,7 +135,7 @@ export function Contact() {
                       />
                     </div>
                     <label htmlFor="age-verification" className="text-xs text-left">
-                      {t("contact.ageVerification")}
+                      {renderAgeVerificationLabel()}
                     </label>
                   </div>
                   
