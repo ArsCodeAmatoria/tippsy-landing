@@ -31,7 +31,7 @@ export function Features() {
   return (
     <section id="features" className="py-16 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+        <div className="mx-auto flex max-w-5xl flex-col items-center justify-center space-y-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ export function Features() {
               Tippsy combines social networking with bar discovery to create the ultimate nightlife companion.
             </p>
           </motion.div>
-          <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
+          <div className="mx-auto mt-16 grid w-full max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
             {features.map((feature, index) => (
               <motion.div
                 key={index}

@@ -15,7 +15,7 @@ export function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col items-center justify-center space-y-4 text-center"
+          className="mx-auto max-w-3xl flex flex-col items-center justify-center space-y-4 text-center"
         >
           <h2 className="text-3xl font-bold tracking-tighter text-accent-foreground md:text-4xl/tight lg:text-5xl">
             Ready to transform your social life?
