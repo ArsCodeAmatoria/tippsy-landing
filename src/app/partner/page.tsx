@@ -110,21 +110,9 @@ export default function PartnerPage() {
                     <li>Decentralized social graph development</li>
                     <li>Crypto payment integrations for venue tab management</li>
                   </ul>
-                  <div className="grid grid-cols-5 gap-4 mt-6">
+                  <div className="flex justify-center mt-6">
                     <div className="flex justify-center items-center">
-                      <Image src="/images/tech-logos/ethereum-logo.svg" width={40} height={40} alt="Ethereum" />
-                    </div>
-                    <div className="flex justify-center items-center">
-                      <Image src="/images/tech-logos/polygon-logo.svg" width={40} height={40} alt="Polygon" />
-                    </div>
-                    <div className="flex justify-center items-center">
-                      <Image src="/images/tech-logos/solana-logo.svg" width={40} height={40} alt="Solana" />
-                    </div>
-                    <div className="flex justify-center items-center">
-                      <Image src="/images/tech-logos/polkadot-logo.svg" width={40} height={40} alt="Polkadot" />
-                    </div>
-                    <div className="flex justify-center items-center">
-                      <Image src="/images/tech-logos/near-logo.svg" width={40} height={40} alt="NEAR Protocol" />
+                      <Image src="/images/tech-logos/polkadot-logo.svg" width={80} height={80} alt="Polkadot" />
                     </div>
                   </div>
                 </div>
@@ -147,7 +135,7 @@ export default function PartnerPage() {
                   <p className="mt-4">
                     Our tech stack includes:
                   </p>
-                  <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mt-4">
+                  <div className="grid grid-cols-3 md:grid-cols-5 gap-4 mt-4">
                     <div className="text-center">
                       <div className="flex justify-center mb-2">
                         <Image src="/images/tech-logos/nextjs-logo.svg" width={40} height={40} alt="Next.js" />
@@ -162,27 +150,42 @@ export default function PartnerPage() {
                     </div>
                     <div className="text-center">
                       <div className="flex justify-center mb-2">
-                        <Image src="/images/tech-logos/tailwind-logo.svg" width={40} height={40} alt="Tailwind CSS" />
+                        <Image 
+                          src="/images/tech-logos/tailwind-logo-dark.svg" 
+                          width={40} 
+                          height={40} 
+                          alt="Tailwind CSS"
+                          className="dark:hidden" 
+                        />
+                        <Image 
+                          src="/images/tech-logos/tailwind-logo-light.svg" 
+                          width={40} 
+                          height={40} 
+                          alt="Tailwind CSS"
+                          className="hidden dark:block" 
+                        />
                       </div>
                       <p className="text-xs font-medium">Tailwind</p>
                     </div>
                     <div className="text-center">
                       <div className="flex justify-center mb-2">
-                        <Image src="/images/tech-logos/typescript-logo.svg" width={40} height={40} alt="TypeScript" />
+                        <Image src="/images/tech-logos/nodejs-logo.svg" width={40} height={40} alt="Node.js" />
                       </div>
-                      <p className="text-xs font-medium">TypeScript</p>
+                      <p className="text-xs font-medium">Node.js</p>
                     </div>
                     <div className="text-center">
                       <div className="flex justify-center mb-2">
-                        <Image src="/images/tech-logos/swift-logo.svg" width={40} height={40} alt="Swift" />
+                        <Image src="/images/tech-logos/rust-logo.svg" width={40} height={40} alt="Rust" />
                       </div>
-                      <p className="text-xs font-medium">Swift</p>
+                      <p className="text-xs font-medium">Rust</p>
                     </div>
+                  </div>
+                  <div className="flex justify-center mt-6">
                     <div className="text-center">
                       <div className="flex justify-center mb-2">
-                        <Image src="/images/tech-logos/kotlin-logo.svg" width={40} height={40} alt="Kotlin" />
+                        <Image src="/images/tech-logos/llama-logo.svg" width={60} height={60} alt="LLaMA AI" />
                       </div>
-                      <p className="text-xs font-medium">Kotlin</p>
+                      <p className="text-xs font-medium">LLaMA AI</p>
                     </div>
                   </div>
                 </div>
