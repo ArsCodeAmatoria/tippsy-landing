@@ -88,6 +88,23 @@ export default function PartnerPage() {
               </div>
               
               <div className="space-y-4">
+                <h2 id="blockchain-partnerships" className="text-primary-foreground">Web3 & Blockchain Partnerships</h2>
+                <div className="rounded-lg border p-4 bg-violet-50/50 dark:bg-violet-950/20 border-violet-200 dark:border-violet-900/30 shadow-sm">
+                  <p>
+                    Tippsy is pioneering the integration of blockchain technology for enhanced security, privacy, and user experience:
+                  </p>
+                  <ul className="mt-4">
+                    <li><strong>Polkadot Decentralized Identity (DID)</strong> - Secure, self-sovereign digital identities for users</li>
+                    <li><strong>Soulbound Tokens (SBTs)</strong> - Non-transferable tokens that represent user achievements and reputation</li>
+                    <li><strong>Zero-Knowledge Proofs (ZKPs)</strong> - Privacy-preserving verification without revealing sensitive information</li>
+                  </ul>
+                  <p className="mt-4">
+                    We're looking for partners with expertise in these technologies to help build the next generation of social applications.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
                 <h2 id="tech-partnerships" className="text-primary-foreground">Technology Development Partnerships</h2>
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
                   <div className="rounded-lg border bg-card p-4 shadow-sm dark:bg-gray-800/70 dark:border-gray-700">
@@ -138,6 +155,89 @@ export default function PartnerPage() {
                       <li>Motion design</li>
                       <li>User testing and research</li>
                     </ul>
+                  </div>
+                </div>
+                
+                <div className="mt-6">
+                  <h3 className="text-lg font-semibold mb-4">Technologies We Work With</h3>
+                  <div className="flex flex-wrap gap-6 items-center justify-center mt-4 bg-card rounded-lg border p-6 dark:bg-gray-800/50">
+                    <div className="flex flex-col items-center">
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image 
+                          src="https://raw.githubusercontent.com/vercel/next.js/canary/docs/public/images/next.svg" 
+                          alt="Next.js" 
+                          fill 
+                          className="object-contain"
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground">Next.js</span>
+                    </div>
+                    
+                    <div className="flex flex-col items-center">
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image 
+                          src="https://raw.githubusercontent.com/rust-lang/rust-artwork/master/logo/rust-logo-blk.svg" 
+                          alt="Rust" 
+                          fill 
+                          className="object-contain"
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground">Rust</span>
+                    </div>
+                    
+                    <div className="flex flex-col items-center">
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image 
+                          src="https://polkadot.network/assets/img/logo-polkadot.svg" 
+                          alt="Polkadot" 
+                          fill 
+                          className="object-contain"
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground">Polkadot</span>
+                    </div>
+                    
+                    <div className="flex flex-col items-center">
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image 
+                          src="https://reactjs.org/favicon.ico" 
+                          alt="React" 
+                          fill 
+                          className="object-contain"
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground">React</span>
+                    </div>
+                    
+                    <div className="flex flex-col items-center">
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image 
+                          src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/master/.github/logo-dark.svg" 
+                          alt="Tailwind CSS" 
+                          fill 
+                          className="object-contain dark:hidden"
+                        />
+                        <Image 
+                          src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/master/.github/logo-light.svg" 
+                          alt="Tailwind CSS" 
+                          fill 
+                          className="object-contain hidden dark:block"
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground">Tailwind</span>
+                    </div>
+                    
+                    <div className="flex flex-col items-center">
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image 
+                          src="https://raw.githubusercontent.com/nodejs/nodejs.org/main/public/static/images/logo-hexagon.svg" 
+                          alt="Node.js" 
+                          fill 
+                          className="object-contain"
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground">Node.js</span>
+                    </div>
                   </div>
                 </div>
               </div>

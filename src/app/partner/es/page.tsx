@@ -88,6 +88,23 @@ export default function PartnerPageES() {
               </div>
               
               <div className="space-y-4">
+                <h2 id="asociaciones-blockchain" className="text-primary-foreground">Asociaciones Web3 y Blockchain</h2>
+                <div className="rounded-lg border p-4 bg-violet-50/50 dark:bg-violet-950/20 border-violet-200 dark:border-violet-900/30 shadow-sm">
+                  <p>
+                    Tippsy está liderando la integración de tecnología blockchain para mejorar la seguridad, privacidad y experiencia del usuario:
+                  </p>
+                  <ul className="mt-4">
+                    <li><strong>Identidad Descentralizada Polkadot (DID)</strong> - Identidades digitales seguras y auto-soberanas para usuarios</li>
+                    <li><strong>Tokens Soulbound (SBTs)</strong> - Tokens no transferibles que representan logros y reputación del usuario</li>
+                    <li><strong>Pruebas de Conocimiento Cero (ZKPs)</strong> - Verificación que preserva la privacidad sin revelar información sensible</li>
+                  </ul>
+                  <p className="mt-4">
+                    Buscamos socios con experiencia en estas tecnologías para ayudar a construir la próxima generación de aplicaciones sociales.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
                 <h2 id="asociaciones-tecnologicas" className="text-primary-foreground">Asociaciones de Desarrollo Tecnológico</h2>
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
                   <div className="rounded-lg border bg-card p-4 shadow-sm dark:bg-gray-800/70 dark:border-gray-700">
@@ -138,6 +155,89 @@ export default function PartnerPageES() {
                       <li>Diseño de movimiento</li>
                       <li>Pruebas de usuario e investigación</li>
                     </ul>
+                  </div>
+                </div>
+                
+                <div className="mt-6">
+                  <h3 className="text-lg font-semibold mb-4">Tecnologías Con Las Que Trabajamos</h3>
+                  <div className="flex flex-wrap gap-6 items-center justify-center mt-4 bg-card rounded-lg border p-6 dark:bg-gray-800/50">
+                    <div className="flex flex-col items-center">
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image 
+                          src="https://raw.githubusercontent.com/vercel/next.js/canary/docs/public/images/next.svg" 
+                          alt="Next.js" 
+                          fill 
+                          className="object-contain"
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground">Next.js</span>
+                    </div>
+                    
+                    <div className="flex flex-col items-center">
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image 
+                          src="https://raw.githubusercontent.com/rust-lang/rust-artwork/master/logo/rust-logo-blk.svg" 
+                          alt="Rust" 
+                          fill 
+                          className="object-contain"
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground">Rust</span>
+                    </div>
+                    
+                    <div className="flex flex-col items-center">
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image 
+                          src="https://polkadot.network/assets/img/logo-polkadot.svg" 
+                          alt="Polkadot" 
+                          fill 
+                          className="object-contain"
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground">Polkadot</span>
+                    </div>
+                    
+                    <div className="flex flex-col items-center">
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image 
+                          src="https://reactjs.org/favicon.ico" 
+                          alt="React" 
+                          fill 
+                          className="object-contain"
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground">React</span>
+                    </div>
+                    
+                    <div className="flex flex-col items-center">
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image 
+                          src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/master/.github/logo-dark.svg" 
+                          alt="Tailwind CSS" 
+                          fill 
+                          className="object-contain dark:hidden"
+                        />
+                        <Image 
+                          src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/master/.github/logo-light.svg" 
+                          alt="Tailwind CSS" 
+                          fill 
+                          className="object-contain hidden dark:block"
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground">Tailwind</span>
+                    </div>
+                    
+                    <div className="flex flex-col items-center">
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image 
+                          src="https://raw.githubusercontent.com/nodejs/nodejs.org/main/public/static/images/logo-hexagon.svg" 
+                          alt="Node.js" 
+                          fill 
+                          className="object-contain"
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground">Node.js</span>
+                    </div>
                   </div>
                 </div>
               </div>
