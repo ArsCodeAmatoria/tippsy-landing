@@ -162,46 +162,187 @@ export default function PartnerPage() {
                   <h3 className="text-lg font-semibold mb-4">Technologies We Work With</h3>
                   <div className="flex flex-wrap gap-6 items-center justify-center mt-4 bg-card rounded-lg border p-6 dark:bg-gray-800/50">
                     <div className="flex flex-col items-center">
-                      <div className="h-12 w-12 relative mb-2 flex items-center justify-center bg-black text-white rounded-full">
-                        <span className="text-lg font-bold">N.js</span>
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image
+                          src="/images/tech-logos/nextjs-logo.svg"
+                          alt="Next.js Logo"
+                          fill
+                          className="object-contain dark:brightness-200 dark:invert"
+                        />
                       </div>
                       <span className="text-xs text-muted-foreground">Next.js</span>
                     </div>
                     
                     <div className="flex flex-col items-center">
-                      <div className="h-12 w-12 relative mb-2 flex items-center justify-center bg-black text-orange-500 rounded-md">
-                        <span className="text-lg font-bold">RS</span>
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image
+                          src="/images/tech-logos/rust-logo.svg"
+                          alt="Rust Logo"
+                          fill
+                          className="object-contain"
+                        />
                       </div>
                       <span className="text-xs text-muted-foreground">Rust</span>
                     </div>
                     
                     <div className="flex flex-col items-center">
-                      <div className="h-12 w-12 relative mb-2 flex items-center justify-center bg-violet-700 text-white rounded-full">
-                        <span className="text-sm font-bold">Polkadot</span>
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image
+                          src="/images/tech-logos/polkadot-logo.svg"
+                          alt="Polkadot Logo"
+                          fill
+                          className="object-contain"
+                        />
                       </div>
                       <span className="text-xs text-muted-foreground">Polkadot</span>
                     </div>
                     
                     <div className="flex flex-col items-center">
-                      <div className="h-12 w-12 relative mb-2 flex items-center justify-center bg-blue-50 text-cyan-500 rounded-full border border-cyan-500">
-                        <span className="text-2xl font-bold">⚛️</span>
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image
+                          src="/images/tech-logos/react-logo.svg"
+                          alt="React Logo"
+                          fill
+                          className="object-contain"
+                        />
                       </div>
                       <span className="text-xs text-muted-foreground">React</span>
                     </div>
                     
                     <div className="flex flex-col items-center">
-                      <div className="h-12 w-12 relative mb-2 flex items-center justify-center bg-cyan-500 text-white rounded-md">
-                        <span className="text-lg font-bold">TW</span>
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image
+                          src="/images/tech-logos/tailwind-logo-light.svg"
+                          alt="Tailwind CSS Logo"
+                          fill
+                          className="object-contain hidden dark:block"
+                        />
+                        <Image
+                          src="/images/tech-logos/tailwind-logo-dark.svg"
+                          alt="Tailwind CSS Logo"
+                          fill
+                          className="object-contain block dark:hidden"
+                        />
                       </div>
                       <span className="text-xs text-muted-foreground">Tailwind</span>
                     </div>
                     
                     <div className="flex flex-col items-center">
-                      <div className="h-12 w-12 relative mb-2 flex items-center justify-center bg-green-600 text-white rounded-md">
-                        <span className="text-lg font-bold">Node</span>
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image
+                          src="/images/tech-logos/nodejs-logo.svg"
+                          alt="Node.js Logo"
+                          fill
+                          className="object-contain"
+                        />
                       </div>
                       <span className="text-xs text-muted-foreground">Node.js</span>
                     </div>
+                    
+                    <div className="flex flex-col items-center">
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image
+                          src="/images/tech-logos/fastapi-logo.svg"
+                          alt="FastAPI Logo"
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground">FastAPI</span>
+                    </div>
+                    
+                    <div className="flex flex-col items-center">
+                      <div className="h-12 w-12 relative mb-2">
+                        <Image
+                          src="/images/tech-logos/llama-logo.svg"
+                          alt="Llama AI Logo"
+                          fill
+                          className="object-contain dark:invert"
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground">Llama AI</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <h2 id="roadmap" className="text-primary-foreground">Tippsy Development Roadmap</h2>
+                <div className="rounded-lg border bg-card p-4 shadow-sm dark:bg-gray-800/70 dark:border-gray-700">
+                  <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+                  
+                    <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                      <div className="flex items-center justify-center w-10 h-10 rounded-full border border-slate-200 bg-slate-50 group-odd:order-1 group-even:order-1 dark:bg-slate-700 dark:border-slate-700 shadow-sm">
+                        <span className="text-slate-600 font-bold dark:text-slate-200">Q3</span>
+                      </div>
+                      
+                      <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 p-4 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
+                        <div className="font-bold text-slate-800 dark:text-slate-100 mb-1">Q3 2024: Security & Authentication</div>
+                        <div className="text-sm text-slate-600 dark:text-slate-300">
+                          <ul className="list-disc pl-5 space-y-1 mt-1">
+                            <li>Implement Polkadot Decentralized Identity (DID) for secure user authentication</li>
+                            <li>Develop backend Rust API with FastAPI integration for authentication flows</li>
+                            <li>Create privacy-preserving Zero-Knowledge Proof verification system</li>
+                            <li>Launch Soulbound Tokens (SBTs) for user achievements and reputation</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                      <div className="flex items-center justify-center w-10 h-10 rounded-full border border-slate-200 bg-slate-50 group-odd:order-1 group-even:order-1 dark:bg-slate-700 dark:border-slate-700 shadow-sm">
+                        <span className="text-slate-600 font-bold dark:text-slate-200">Q4</span>
+                      </div>
+                      
+                      <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-950/30 dark:to-amber-900/30 p-4 rounded-xl shadow-sm border border-amber-200 dark:border-amber-800/30">
+                        <div className="font-bold text-slate-800 dark:text-slate-100 mb-1">Q4 2024: AI Integration & Social Discovery</div>
+                        <div className="text-sm text-slate-600 dark:text-slate-300">
+                          <ul className="list-disc pl-5 space-y-1 mt-1">
+                            <li>Integrate Llama AI for personalized venue recommendations</li>
+                            <li>Launch AI-powered social matching algorithm</li>
+                            <li>Build venue discovery features with AI-enhanced filtering</li>
+                            <li>Develop personalized experience paths based on user preferences</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                      <div className="flex items-center justify-center w-10 h-10 rounded-full border border-slate-200 bg-slate-50 group-odd:order-1 group-even:order-1 dark:bg-slate-700 dark:border-slate-700 shadow-sm">
+                        <span className="text-slate-600 font-bold dark:text-slate-200">Q1</span>
+                      </div>
+                      
+                      <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gradient-to-br from-violet-50 to-violet-100 dark:from-violet-950/30 dark:to-violet-900/30 p-4 rounded-xl shadow-sm border border-violet-200 dark:border-violet-800/30">
+                        <div className="font-bold text-slate-800 dark:text-slate-100 mb-1">Q1 2025: Mobile Apps & Venue Partnerships</div>
+                        <div className="text-sm text-slate-600 dark:text-slate-300">
+                          <ul className="list-disc pl-5 space-y-1 mt-1">
+                            <li>Release native mobile applications for iOS and Android</li>
+                            <li>Launch venue partnership program with QR code check-ins</li>
+                            <li>Implement in-app promotions and special offers for partners</li>
+                            <li>Create analytics dashboard for venue partners</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                      <div className="flex items-center justify-center w-10 h-10 rounded-full border border-slate-200 bg-slate-50 group-odd:order-1 group-even:order-1 dark:bg-slate-700 dark:border-slate-700 shadow-sm">
+                        <span className="text-slate-600 font-bold dark:text-slate-200">Q2</span>
+                      </div>
+                      
+                      <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950/30 dark:to-green-900/30 p-4 rounded-xl shadow-sm border border-green-200 dark:border-green-800/30">
+                        <div className="font-bold text-slate-800 dark:text-slate-100 mb-1">Q2 2025: Global Expansion & Brand Partnerships</div>
+                        <div className="text-sm text-slate-600 dark:text-slate-300">
+                          <ul className="list-disc pl-5 space-y-1 mt-1">
+                            <li>Expand to major international markets</li>
+                            <li>Launch brand partnership platform for alcohol and beverage companies</li>
+                            <li>Implement sponsored recommendations with brand integration</li>
+                            <li>Develop cross-platform analytics for measuring campaign effectiveness</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    
                   </div>
                 </div>
               </div>
