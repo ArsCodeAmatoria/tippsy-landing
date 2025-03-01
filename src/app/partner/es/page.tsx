@@ -44,7 +44,7 @@ export default function PartnerPageES() {
           <div className="prose prose-gray max-w-none dark:prose-invert prose-headings:scroll-mt-28 prose-headings:font-bold prose-headings:tracking-tight prose-h2:mt-10 prose-h2:text-2xl prose-h3:text-xl prose-img:rounded-md prose-img:border prose-img:bg-muted prose-pre:rounded-lg prose-pre:border dark:prose-p:text-gray-300 dark:prose-li:text-gray-300 dark:prose-strong:text-white dark:prose-a:text-primary">
             <div className="relative w-full rounded-xl overflow-hidden shadow-xl mb-10 aspect-[16/9]">
               <Image 
-                src="/images/partners-hero-image.png" 
+                src="/images/tippsy-about.png" 
                 alt="Oportunidades de asociación con Tippsy" 
                 fill 
                 className="object-cover"
