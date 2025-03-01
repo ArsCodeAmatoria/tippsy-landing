@@ -29,6 +29,10 @@ export function Footer() {
             <Link href={language === "es" ? "/about/es" : "/about"} className="transition-colors hover:text-foreground">
               {t("footer.about")}
             </Link>
+            <div className="h-4 w-px bg-border"></div>
+            <Link href={language === "es" ? "/partner/es" : "/partner"} className="transition-colors hover:text-foreground">
+              {t("footer.partner")}
+            </Link>
           </div>
           <p className="text-sm text-muted-foreground">
             {t("footer.copyright").replace("2025", new Date().getFullYear().toString())}

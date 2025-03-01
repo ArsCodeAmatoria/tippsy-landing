@@ -25,8 +25,8 @@ export function Header() {
           <Link href={language === "es" ? "/about/es" : "/about"} className="text-sm font-medium transition-colors hover:text-primary">
             {t("nav.about")}
           </Link>
-          <Link href="#pricing" className="text-sm font-medium transition-colors hover:text-primary">
-            {t("nav.pricing")}
+          <Link href={language === "es" ? "/partner/es" : "/partner"} className="text-sm font-medium transition-colors hover:text-primary">
+            {t("nav.partner")}
           </Link>
           <Link href="#contact" className="text-sm font-medium transition-colors hover:text-primary">
             {t("nav.contact")}

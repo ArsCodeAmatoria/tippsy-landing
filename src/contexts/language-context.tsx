@@ -13,7 +13,7 @@ export interface LanguageContextType {
 // Define the translation keys and values with proper typing
 type TranslationKeys = 
   | "hero.title" | "hero.subtitle" | "hero.comingSoon" | "hero.finishing" | "hero.joinWaitlist" | "hero.waitlistBtn" | "hero.learnMoreBtn"
-  | "nav.features" | "nav.about" | "nav.pricing" | "nav.contact"
+  | "nav.features" | "nav.about" | "nav.partner" | "nav.contact"
   | "cta.title" | "cta.subtitle" | "cta.joinWaitlist" | "cta.learnMore"
   | "contact.title" | "contact.subtitle" | "contact.waitlistTitle" | "contact.waitlistInfo" | "contact.thanks" | "contact.emailLabel" | "contact.emailPlaceholder" | "contact.submitBtn" | "contact.ageVerification"
   | "features.title" | "features.subtitle"
@@ -21,7 +21,7 @@ type TranslationKeys =
   | "features.bars.title" | "features.bars.description"
   | "features.deals.title" | "features.deals.description"
   | "features.safety.title" | "features.safety.description"
-  | "footer.privacy" | "footer.terms" | "footer.contact" | "footer.about" | "footer.copyright"
+  | "footer.privacy" | "footer.terms" | "footer.contact" | "footer.about" | "footer.partner" | "footer.copyright"
   | "legal.privacyPolicy" | "legal.termsOfService" | "legal.lastUpdated" | "legal.back" | "legal.legalLabel" | "legal.contactUs" | "legal.contactUsText"
 
 type TranslationRecord = Record<TranslationKeys, string>
@@ -39,7 +39,7 @@ const translations: Translations = {
     
     "nav.features": "Features",
     "nav.about": "About Us",
-    "nav.pricing": "Pricing",
+    "nav.partner": "Partner With Us",
     "nav.contact": "Contact",
     
     "cta.title": "Ready to transform your social life?",
@@ -72,6 +72,7 @@ const translations: Translations = {
     "footer.terms": "Terms & Conditions",
     "footer.contact": "Contact",
     "footer.about": "About Us",
+    "footer.partner": "Partner With Us",
     "footer.copyright": "© 2025 Tippsy. All rights reserved.",
     
     // Legal pages
@@ -94,7 +95,7 @@ const translations: Translations = {
     
     "nav.features": "Características",
     "nav.about": "Sobre Nosotros",
-    "nav.pricing": "Precios",
+    "nav.partner": "Asóciese Con Nosotros",
     "nav.contact": "Contacto",
     
     "cta.title": "¿Listo para transformar tu vida social?",
@@ -127,6 +128,7 @@ const translations: Translations = {
     "footer.terms": "Términos y Condiciones",
     "footer.contact": "Contacto",
     "footer.about": "Sobre Nosotros",
+    "footer.partner": "Asóciese Con Nosotros",
     "footer.copyright": "© 2025 Tippsy. Todos los derechos reservados.",
     
     // Legal pages
