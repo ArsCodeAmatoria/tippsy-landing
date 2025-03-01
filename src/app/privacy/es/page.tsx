@@ -37,8 +37,8 @@ export default function PrivacyPolicyES() {
             </div>
           </div>
           
-          <div className="prose prose-gray dark:prose-invert max-w-none prose-headings:scroll-mt-28 prose-headings:font-bold prose-h2:mt-10 prose-h2:text-2xl prose-h3:text-xl prose-img:rounded-md prose-img:border prose-img:bg-muted prose-pre:rounded-lg prose-pre:border">
-            <p className="lead text-lg">
+          <div className="prose prose-gray dark:prose-invert max-w-none prose-headings:scroll-mt-28 prose-headings:font-bold prose-h2:mt-10 prose-h2:text-2xl prose-h3:text-xl prose-img:rounded-md prose-img:border prose-img:bg-muted prose-pre:rounded-lg prose-pre:border dark:prose-p:text-gray-300 dark:prose-li:text-gray-300 dark:prose-strong:text-white dark:prose-a:text-primary">
+            <p className="lead text-lg dark:text-gray-200">
               Por favor, lee esta Política de Privacidad cuidadosamente antes de usar la aplicación móvil 
               y el sitio web de Tippsy (el "Servicio") operado por Tippsy ("nosotros", "nos" o "nuestro").
             </p>
@@ -48,7 +48,7 @@ export default function PrivacyPolicyES() {
               personal cuando utilizas nuestro Servicio y las opciones que tienes asociadas con esa información.
             </p>
             
-            <div className="my-8 rounded-lg border bg-amber-50 dark:bg-amber-950/30 p-6 shadow-sm">
+            <div className="my-8 rounded-lg border bg-amber-50 dark:bg-amber-950/50 p-6 shadow-sm dark:border-amber-900/50">
               <p className="font-medium mb-0 text-lg">
                 <strong>Al usar nuestro Servicio, aceptas la recopilación y el uso de información de acuerdo 
                 con esta política. Si no estás de acuerdo con alguna parte de esta política, 
@@ -67,7 +67,7 @@ export default function PrivacyPolicyES() {
               personalmente identificable que se puede utilizar para contactarte o identificarte 
               ("Información Personal"). Esta información puede incluir, pero no se limita a:
             </p>
-            <ul className="space-y-2">
+            <ul className="space-y-2 dark:text-gray-300">
               <li><strong>Información de contacto</strong> - Dirección de correo electrónico, número de teléfono y nombre</li>
               <li><strong>Información de perfil</strong> - Edad, foto de perfil, intereses y preferencias</li>
               <li><strong>Información de ubicación</strong> - Con tu consentimiento, podemos acceder a tu ubicación para mostrarte bares y eventos cercanos</li>
@@ -169,7 +169,7 @@ export default function PrivacyPolicyES() {
               Los cambios a esta Política de Privacidad son efectivos cuando se publican en esta página.
             </p>
             
-            <div className="rounded-lg border bg-card p-6 shadow-sm mt-10">
+            <div className="rounded-lg border bg-card p-6 shadow-sm mt-10 dark:bg-gray-900 dark:border-gray-800">
               <h2 id="contactanos" className="mt-0 font-bold text-2xl">Contáctanos</h2>
               <p className="mb-2">
                 Si tienes alguna pregunta sobre esta Política de Privacidad, contáctanos en:

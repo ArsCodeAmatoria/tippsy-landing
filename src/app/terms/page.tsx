@@ -37,8 +37,8 @@ export default function TermsOfService() {
             </div>
           </div>
           
-          <div className="prose prose-gray dark:prose-invert max-w-none prose-headings:scroll-mt-28 prose-headings:font-bold prose-h2:mt-10 prose-h2:text-2xl prose-h3:text-xl prose-img:rounded-md prose-img:border prose-img:bg-muted prose-pre:rounded-lg prose-pre:border">
-            <p className="lead text-lg">
+          <div className="prose prose-gray dark:prose-invert max-w-none prose-headings:scroll-mt-28 prose-headings:font-bold prose-h2:mt-10 prose-h2:text-2xl prose-h3:text-xl prose-img:rounded-md prose-img:border prose-img:bg-muted prose-pre:rounded-lg prose-pre:border dark:prose-p:text-gray-300 dark:prose-li:text-gray-300 dark:prose-strong:text-white dark:prose-a:text-primary">
+            <p className="lead text-lg dark:text-gray-200">
               Please read these Terms of Service ("Terms", "Terms of Service") carefully before using 
               the Tippsy mobile application and website (the "Service") operated by Tippsy ("us", "we", or "our").
             </p>
@@ -48,7 +48,7 @@ export default function TermsOfService() {
               these Terms. These Terms apply to all visitors, users, and others who access or use the Service.
             </p>
             
-            <div className="my-8 rounded-lg border bg-amber-50 dark:bg-amber-950/30 p-6 shadow-sm">
+            <div className="my-8 rounded-lg border bg-amber-50 dark:bg-amber-950/50 p-6 shadow-sm dark:border-amber-900/50">
               <p className="font-medium mb-0 text-lg">
                 <strong>By accessing or using the Service you agree to be bound by these Terms. If you disagree 
                 with any part of the terms, then you may not access the Service.</strong>
@@ -92,7 +92,7 @@ export default function TermsOfService() {
             <p>
               By posting Content on or through the Service, you represent and warrant that:
             </p>
-            <ul className="space-y-2">
+            <ul className="space-y-2 dark:text-gray-300">
               <li>
                 <strong>You own the Content</strong> - The Content is yours (you own it) or you have the right to use it and grant us the rights and license as provided in these Terms.
               </li>
@@ -103,7 +103,7 @@ export default function TermsOfService() {
             
             <h2 id="prohibited-conduct" className="text-primary-foreground">Prohibited Conduct</h2>
             <p>You agree not to engage in any of the following prohibited activities:</p>
-            <ul className="space-y-2">
+            <ul className="space-y-2 dark:text-gray-300">
               <li><strong>Illegal activities</strong> - Using the Service for any illegal purpose or in violation of any local, state, national, or international law</li>
               <li><strong>Harassment</strong> - Harassing, threatening, or intimidating any other users</li>
               <li><strong>Impersonation</strong> - Impersonating another person or entity</li>
@@ -171,7 +171,7 @@ export default function TermsOfService() {
             <p>
               Tippsy, its subsidiaries, affiliates, and its licensors do not warrant that:
             </p>
-            <ul className="space-y-2">
+            <ul className="space-y-2 dark:text-gray-300">
               <li><strong>Continuous service</strong> - The Service will function uninterrupted, secure or available at any particular time or location</li>
               <li><strong>Error correction</strong> - Any errors or defects will be corrected</li>
               <li><strong>Security guarantees</strong> - The Service is free of viruses or other harmful components</li>
@@ -215,7 +215,7 @@ export default function TermsOfService() {
               to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.
             </p>
             
-            <div className="rounded-lg border bg-card p-6 shadow-sm mt-10">
+            <div className="rounded-lg border bg-card p-6 shadow-sm mt-10 dark:bg-gray-900 dark:border-gray-800">
               <h2 id="contact-us" className="mt-0 font-bold text-2xl">Contact Us</h2>
               <p className="mb-2">
                 If you have any questions about these Terms, please contact us at:

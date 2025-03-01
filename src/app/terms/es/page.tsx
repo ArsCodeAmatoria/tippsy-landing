@@ -37,8 +37,8 @@ export default function TermsOfServiceES() {
             </div>
           </div>
           
-          <div className="prose prose-gray dark:prose-invert max-w-none prose-headings:scroll-mt-28 prose-headings:font-bold prose-h2:mt-10 prose-h2:text-2xl prose-h3:text-xl prose-img:rounded-md prose-img:border prose-img:bg-muted prose-pre:rounded-lg prose-pre:border">
-            <p className="lead text-lg">
+          <div className="prose prose-gray dark:prose-invert max-w-none prose-headings:scroll-mt-28 prose-headings:font-bold prose-h2:mt-10 prose-h2:text-2xl prose-h3:text-xl prose-img:rounded-md prose-img:border prose-img:bg-muted prose-pre:rounded-lg prose-pre:border dark:prose-p:text-gray-300 dark:prose-li:text-gray-300 dark:prose-strong:text-white dark:prose-a:text-primary">
+            <p className="lead text-lg dark:text-gray-200">
               Por favor, lee estos Términos de Servicio ("Términos", "Términos de Servicio") cuidadosamente 
               antes de usar la aplicación móvil y el sitio web de Tippsy (el "Servicio") operado por 
               Tippsy ("nosotros", "nos" o "nuestro").
@@ -49,10 +49,10 @@ export default function TermsOfServiceES() {
               Estos Términos se aplican a todos los visitantes, usuarios y otros que accedan o usen el Servicio.
             </p>
             
-            <div className="my-8 rounded-lg border bg-amber-50 dark:bg-amber-950/30 p-6 shadow-sm">
+            <div className="my-8 rounded-lg border bg-amber-50 dark:bg-amber-950/50 p-6 shadow-sm dark:border-amber-900/50">
               <p className="font-medium mb-0 text-lg">
-                <strong>Al acceder o usar el Servicio, aceptas estar sujeto a estos Términos. Si no estás de 
-                acuerdo con alguna parte de los términos, entonces no puedes acceder al Servicio.</strong>
+                <strong>Al acceder o usar el Servicio, aceptas estar sujeto a estos Términos. 
+                Si no estás de acuerdo con alguna parte de los términos, no puedes acceder al Servicio.</strong>
               </p>
             </div>
             
@@ -94,12 +94,12 @@ export default function TermsOfServiceES() {
             <p>
               Al publicar Contenido en o a través del Servicio, representas y garantizas que:
             </p>
-            <ul className="space-y-2">
+            <ul className="space-y-2 dark:text-gray-300">
               <li>
-                <strong>Eres propietario del Contenido</strong> - El Contenido es tuyo (eres propietario) o tienes el derecho de usarlo y otorgarnos los derechos y licencia como se establece en estos Términos.
+                <strong>Eres propietario del Contenido</strong> - El Contenido es tuyo (eres su propietario) o tienes derecho a usarlo y concedernos los derechos y licencias proporcionados en estos Términos.
               </li>
               <li>
-                <strong>No hay violación de derechos</strong> - La publicación de tu Contenido no viola los derechos de privacidad, derechos de publicidad, derechos de autor, derechos contractuales o cualquier otro derecho de cualquier persona.
+                <strong>No hay violación de derechos</strong> - La publicación de tu Contenido no viola los derechos de privacidad, derechos de publicidad, derechos de autor, derechos contractuales ni ningún otro derecho de cualquier persona.
               </li>
             </ul>
             
@@ -221,10 +221,10 @@ export default function TermsOfServiceES() {
               por favor deja de usar el Servicio.
             </p>
             
-            <div className="rounded-lg border bg-card p-6 shadow-sm mt-10">
+            <div className="rounded-lg border bg-card p-6 shadow-sm mt-10 dark:bg-gray-900 dark:border-gray-800">
               <h2 id="contactanos" className="mt-0 font-bold text-2xl">Contáctanos</h2>
               <p className="mb-2">
-                Si tienes alguna pregunta sobre estos Términos, por favor contáctanos en:
+                Si tienes alguna pregunta sobre estos Términos, contáctanos en:
               </p>
               <p className="mb-0">
                 <a href="mailto:legal@tippsy.app" className="text-primary hover:underline font-medium text-lg">legal@tippsy.app</a>

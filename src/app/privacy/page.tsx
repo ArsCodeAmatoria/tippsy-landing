@@ -37,8 +37,8 @@ export default function PrivacyPolicy() {
             </div>
           </div>
           
-          <div className="prose prose-gray dark:prose-invert max-w-none prose-headings:scroll-mt-28 prose-headings:font-bold prose-h2:mt-10 prose-h2:text-2xl prose-h3:text-xl prose-img:rounded-md prose-img:border prose-img:bg-muted prose-pre:rounded-lg prose-pre:border">
-            <p className="lead text-lg">
+          <div className="prose prose-gray dark:prose-invert max-w-none prose-headings:scroll-mt-28 prose-headings:font-bold prose-h2:mt-10 prose-h2:text-2xl prose-h3:text-xl prose-img:rounded-md prose-img:border prose-img:bg-muted prose-pre:rounded-lg prose-pre:border dark:prose-p:text-gray-300 dark:prose-li:text-gray-300 dark:prose-strong:text-white dark:prose-a:text-primary">
+            <p className="lead text-lg dark:text-gray-200">
               At Tippsy, we take your privacy seriously. This Privacy Policy explains how we collect, 
               use, disclose, and safeguard your information when you use our mobile application and website.
             </p>
@@ -54,7 +54,7 @@ export default function PrivacyPolicy() {
             <p>
               We may collect personal information that you voluntarily provide to us when you:
             </p>
-            <ul className="space-y-2">
+            <ul className="space-y-2 dark:text-gray-300">
               <li><strong>Register for our app</strong> - Creating an account with Tippsy</li>
               <li><strong>Sign up for our waitlist</strong> - Joining to be notified of launch</li>
               <li><strong>Create a user profile</strong> - Setting up your preferences and details</li>
@@ -63,7 +63,7 @@ export default function PrivacyPolicy() {
             </ul>
             
             <p className="mt-6">The personal information we may collect includes:</p>
-            <ul className="space-y-2">
+            <ul className="space-y-2 dark:text-gray-300">
               <li><strong>Name</strong> - Your first and last name</li>
               <li><strong>Email address</strong> - For account creation and communication</li>
               <li><strong>Phone number</strong> - For verification and notifications</li>
@@ -171,7 +171,7 @@ export default function PrivacyPolicy() {
               Privacy Policy are effective when they are posted on this page.
             </p>
             
-            <div className="rounded-lg border bg-card p-6 shadow-sm mt-10">
+            <div className="rounded-lg border bg-card p-6 shadow-sm mt-10 dark:bg-gray-900 dark:border-gray-800">
               <h2 id="contact-us" className="mt-0 font-bold text-2xl">Contact Us</h2>
               <p className="mb-2">
                 If you have any questions about this Privacy Policy, please contact us at:
