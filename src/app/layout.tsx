@@ -1,37 +1,107 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import { Providers } from "./providers";
+import { LanguageProvider } from "@/contexts/language-context";
+import { generateMetadata } from "@/lib/metadata";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-geist-sans",
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-geist-mono",
 });
 
+// Base metadata values that apply across the site
 export const metadata: Metadata = {
-  title: "Tippsy - Social Matchmaking & Bar-Finding App",
-  description: "Connect with new people and discover the best bars in your area with Tippsy.",
+  // This will be merged with page-specific metadata
+  metadataBase: new URL("https://tippsyapp.com"),
+  
+  // Basic site-wide settings
+  applicationName: "Tippsy",
+  keywords: "social app, bar finder, drink deals, matchmaking, social networking, nightlife",
+  robots: "index, follow",
+  generator: "Next.js",
+  referrer: "origin-when-cross-origin",
+  authors: [{ name: "Tippsy Team" }],
+  creator: "Tippsy",
+  publisher: "Tippsy",
+  category: "Social Networking",
+  
+  // App linking
+  appleWebApp: {
+    title: "Tippsy",
+    statusBarStyle: "black-translucent",
+    capable: true,
+  },
+  
+  appLinks: {
+    ios: {
+      url: "/app",
+      app_store_id: "123456789",
+    },
+    android: {
+      package: "com.tippsy.app",
+      app_name: "Tippsy",
+    },
+    web: {
+      url: "/",
+      should_fallback: true,
+    },
+  },
+  
+  // Verification
+  verification: {
+    google: "google-site-verification=your-verification-code",
+    yandex: "yandex-verification-code",
+  },
+  
+  // Icons are typically handled by favicon.ico in the app directory
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+    other: {
+      rel: "apple-touch-icon-precomposed",
+      url: "/apple-touch-icon-precomposed.png",
+    },
+  },
 };
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  viewportFit: 'cover',
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ff007F" },
+    { media: "(prefers-color-scheme: dark)", color: "#ff007F" },
+  ],
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Providers>
-          {children}
-        </Providers>
+        <LanguageProvider>
+          <Providers>
+            {children}
+          </Providers>
+        </LanguageProvider>
       </body>
     </html>
   );
