@@ -10,9 +10,11 @@ import { Logo } from "@/components/logo"
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
-        <Logo />
-        <nav className="hidden items-center space-x-6 md:flex">
+      <div className="container mx-auto px-6 md:px-8 flex h-16 items-center">
+        <div className="flex-1">
+          <Logo />
+        </div>
+        <nav className="hidden items-center space-x-8 mr-8 md:flex">
           <Link href="#features" className="text-sm font-medium transition-colors hover:text-primary">
             Features
           </Link>

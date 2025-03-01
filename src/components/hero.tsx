@@ -11,12 +11,12 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden py-16 md:py-24 lg:py-32">
       <div className="container mx-auto px-6 md:px-8">
-        <div className="flex flex-col items-center md:flex-row md:items-start md:justify-between">
+        <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="max-w-3xl space-y-6 md:max-w-lg md:pl-4"
+            className="max-w-3xl space-y-6 md:max-w-lg md:pl-4 md:pr-8 md:w-1/2"
           >
             <h1 className="text-center text-4xl font-bold leading-tight tracking-tighter md:text-left md:text-5xl lg:text-6xl">
               Meet new people & find great bars with <span className="logo-font text-6xl md:text-7xl">Tippsy</span>
@@ -53,9 +53,9 @@ export function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-16 flex justify-center md:mt-0 md:pr-4"
+            className="mt-16 flex justify-center md:mt-0 md:w-1/2 md:justify-end"
           >
-            <div className="relative h-[500px] w-[250px] overflow-hidden rounded-[40px] border-8 border-foreground shadow-xl dark:border-background">
+            <div className="relative h-[550px] w-[275px] overflow-hidden rounded-[40px] border-8 border-foreground shadow-xl dark:border-background">
               <div className="absolute inset-0 flex items-center justify-center bg-slate-50 text-center text-sm">
                 <p>iOS App Screenshot<br />(Replace with actual app screenshot)</p>
               </div>
