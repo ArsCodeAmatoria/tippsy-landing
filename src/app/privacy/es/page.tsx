@@ -2,11 +2,10 @@ import * as React from "react"
 import Link from "next/link"
 import { Logo } from "@/components/logo"
 import { ArrowLeft } from "lucide-react"
+import { Metadata } from "next"
+import { getPrivacyMetadata } from "@/lib/metadata"
 
-export const metadata = {
-  title: "Política de Privacidad - Tippsy",
-  description: "Política de Privacidad para la aplicación de encuentros sociales Tippsy para bares y vida nocturna."
-}
+export const metadata: Metadata = getPrivacyMetadata({ locale: "es" });
 
 export default function PrivacyPolicyES() {
   return (

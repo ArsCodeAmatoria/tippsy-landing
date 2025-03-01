@@ -2,11 +2,10 @@ import * as React from "react"
 import Link from "next/link"
 import { Logo } from "@/components/logo"
 import { ArrowLeft } from "lucide-react"
+import { Metadata } from "next"
+import { getTermsMetadata } from "@/lib/metadata"
 
-export const metadata = {
-  title: "Términos de Servicio - Tippsy",
-  description: "Términos de Servicio para la aplicación de encuentros sociales Tippsy para bares y vida nocturna."
-}
+export const metadata: Metadata = getTermsMetadata({ locale: "es" });
 
 export default function TermsOfServiceES() {
   return (

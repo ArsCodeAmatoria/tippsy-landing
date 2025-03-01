@@ -2,11 +2,10 @@ import * as React from "react"
 import Link from "next/link"
 import { Logo } from "@/components/logo"
 import { ArrowLeft } from "lucide-react"
+import { Metadata } from "next"
+import { getPrivacyMetadata } from "@/lib/metadata"
 
-export const metadata = {
-  title: "Privacy Policy - Tippsy",
-  description: "Privacy Policy for the Tippsy social matchmaking app for bars and nightlife."
-}
+export const metadata: Metadata = getPrivacyMetadata();
 
 export default function PrivacyPolicy() {
   return (

@@ -3,11 +3,10 @@ import Link from "next/link"
 import Image from "next/image"
 import { Logo } from "@/components/logo"
 import { ArrowLeft } from "lucide-react"
+import { getAboutMetadata } from "@/lib/metadata"
+import { Metadata } from "next"
 
-export const metadata = {
-  title: "About Tippsy - A Social Connector for Bars and Nightlife",
-  description: "Tippsy is a social connector designed to get you out of the house and into real conversations with real people—over a couple of drinks at a bar near you."
-}
+export const metadata: Metadata = getAboutMetadata();
 
 export default function AboutPage() {
   return (

@@ -2,11 +2,10 @@ import * as React from "react"
 import Link from "next/link"
 import { Logo } from "@/components/logo"
 import { ArrowLeft } from "lucide-react"
+import { Metadata } from "next"
+import { getTermsMetadata } from "@/lib/metadata"
 
-export const metadata = {
-  title: "Terms of Service - Tippsy",
-  description: "Terms of Service for the Tippsy social matchmaking app for bars and nightlife."
-}
+export const metadata: Metadata = getTermsMetadata();
 
 export default function TermsOfService() {
   return (
