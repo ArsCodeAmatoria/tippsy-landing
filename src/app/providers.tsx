@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { ThemeProvider as NextThemesProvider } from "next-themes"
+import { LanguageProvider } from "@/contexts/language-context"
 
 type ThemeProviderProps = {
   children: React.ReactNode;
@@ -17,7 +18,9 @@ export function Providers({ children, ...props }: ThemeProviderProps) {
       disableTransitionOnChange
       {...props}
     >
-      {children}
+      <LanguageProvider>
+        {children}
+      </LanguageProvider>
     </NextThemesProvider>
   )
 } 

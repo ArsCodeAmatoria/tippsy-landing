@@ -6,8 +6,11 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 
 import { Button } from "@/components/ui/button"
+import { useLanguage } from "@/contexts/language-context"
 
 export function Hero() {
+  const { t } = useLanguage()
+
   return (
     <section className="relative overflow-hidden py-16 md:py-24 lg:py-32">
       <div className="container mx-auto px-6 md:px-8">
@@ -19,17 +22,17 @@ export function Hero() {
             className="max-w-3xl space-y-6 md:max-w-lg md:pl-4 md:pr-8 md:w-1/2"
           >
             <h1 className="text-center text-4xl font-bold leading-tight tracking-tighter md:text-left md:text-5xl lg:text-6xl">
-              Meet new people & find great bars with <br className="hidden md:inline" />
+              {t("hero.title")} <br className="hidden md:inline" />
               <span className="logo-font text-6xl md:text-7xl tracking-wide">Tippsy</span>
             </h1>
             <p className="mx-auto text-center text-lg text-muted-foreground md:mx-0 md:text-left md:text-xl">
-              The social matchmaking app that connects you with new friends and helps you discover the best bars in your area.
+              {t("hero.subtitle")}
             </p>
             <div className="rounded-lg border border-muted bg-primary/10 p-4 text-center md:text-left">
               <p className="text-sm font-medium">
-                <span className="font-bold text-primary">Coming Soon:</span> We're putting the finishing touches on Tippsy.{" "}
+                <span className="font-bold text-primary">{t("hero.comingSoon")}</span> {t("hero.finishing")}{" "}
                 <Link href="#contact" className="underline underline-offset-2 hover:text-primary">
-                  Join the waitlist for early access!
+                  {t("hero.joinWaitlist")}
                 </Link>
               </p>
             </div>
@@ -52,11 +55,11 @@ export function Hero() {
                     <path d="M9 13h6" />
                     <path d="M9 17h6" />
                   </svg>
-                  Join Waitlist
+                  {t("hero.waitlistBtn")}
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link href="#features">Learn More</Link>
+                <Link href="#features">{t("hero.learnMoreBtn")}</Link>
               </Button>
             </div>
           </motion.div>
@@ -90,7 +93,7 @@ export function Hero() {
                 {/* App Header */}
                 <div className="h-14 flex items-center justify-between px-4 border-b border-gray-200 dark:border-gray-800">
                   <div className="flex items-center">
-                    <span className="text-xl font-bold bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">Tippsy</span>
+                    <span className="logo-font text-xl">Tippsy</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">

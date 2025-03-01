@@ -5,10 +5,12 @@ import { motion } from "framer-motion"
 import { Send } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { useLanguage } from "@/contexts/language-context"
 
 export function Contact() {
   const [email, setEmail] = React.useState("")
   const [submitted, setSubmitted] = React.useState(false)
+  const { t } = useLanguage()
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -27,9 +29,9 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Get in Touch</h2>
+            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">{t("contact.title")}</h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl">
-              Have questions or want to be notified when we launch Tippsy?
+              {t("contact.subtitle")}
             </p>
           </motion.div>
 
@@ -41,22 +43,22 @@ export function Contact() {
             className="w-full max-w-md"
           >
             <div className="rounded-lg border p-6 md:p-8">
-              <h3 className="mb-4 text-xl font-bold">Join the Waitlist</h3>
+              <h3 className="mb-4 text-xl font-bold">{t("contact.waitlistTitle")}</h3>
               <p className="mb-6 text-sm text-muted-foreground">
-                Be the first to know when Tippsy launches. We'll send you early access information and exclusive offers.
+                {t("contact.waitlistInfo")}
               </p>
               
               {submitted ? (
                 <div className="rounded-md bg-primary/10 p-4 text-center">
                   <p className="text-sm font-medium text-primary">
-                    Thanks for joining the waitlist! We'll notify you when Tippsy is ready.
+                    {t("contact.thanks")}
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium">
-                      Email Address
+                      {t("contact.emailLabel")}
                     </label>
                     <input
                       type="email"
@@ -64,12 +66,12 @@ export function Contact() {
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="your.email@example.com"
+                      placeholder={t("contact.emailPlaceholder")}
                       className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                     />
                   </div>
                   <Button type="submit" className="w-full">
-                    <Send className="mr-2 h-4 w-4" /> Join Waitlist
+                    <Send className="mr-2 h-4 w-4" /> {t("contact.submitBtn")}
                   </Button>
                 </form>
               )}
