@@ -29,7 +29,7 @@ export function Contact() {
           >
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Get in Touch</h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl">
-              Have questions or want to be notified when we launch new features?
+              Have questions or want to be notified when we launch Tippsy?
             </p>
           </motion.div>
 
@@ -41,15 +41,15 @@ export function Contact() {
             className="w-full max-w-md"
           >
             <div className="rounded-lg border p-6 md:p-8">
-              <h3 className="mb-4 text-xl font-bold">Join the Android Waitlist</h3>
+              <h3 className="mb-4 text-xl font-bold">Join the Waitlist</h3>
               <p className="mb-6 text-sm text-muted-foreground">
-                Be the first to know when our Android app launches. We'll notify you as soon as it's available.
+                Be the first to know when Tippsy launches. We'll send you early access information and exclusive offers.
               </p>
               
               {submitted ? (
                 <div className="rounded-md bg-primary/10 p-4 text-center">
                   <p className="text-sm font-medium text-primary">
-                    Thanks for joining the waitlist! We'll notify you when the Android app is ready.
+                    Thanks for joining the waitlist! We'll notify you when Tippsy is ready.
                   </p>
                 </div>
               ) : (
