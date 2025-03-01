@@ -13,7 +13,7 @@ export interface LanguageContextType {
 // Define the translation keys and values with proper typing
 type TranslationKeys = 
   | "hero.title" | "hero.subtitle" | "hero.comingSoon" | "hero.finishing" | "hero.joinWaitlist" | "hero.waitlistBtn" | "hero.learnMoreBtn"
-  | "nav.features" | "nav.testimonials" | "nav.pricing" | "nav.contact"
+  | "nav.features" | "nav.about" | "nav.pricing" | "nav.contact"
   | "cta.title" | "cta.subtitle" | "cta.joinWaitlist" | "cta.learnMore"
   | "contact.title" | "contact.subtitle" | "contact.waitlistTitle" | "contact.waitlistInfo" | "contact.thanks" | "contact.emailLabel" | "contact.emailPlaceholder" | "contact.submitBtn" | "contact.ageVerification"
   | "features.title" | "features.subtitle"
@@ -38,7 +38,7 @@ const translations: Translations = {
     "hero.learnMoreBtn": "Learn More",
     
     "nav.features": "Features",
-    "nav.testimonials": "Testimonials",
+    "nav.about": "About Us",
     "nav.pricing": "Pricing",
     "nav.contact": "Contact",
     
@@ -93,7 +93,7 @@ const translations: Translations = {
     "hero.learnMoreBtn": "Saber Más",
     
     "nav.features": "Características",
-    "nav.testimonials": "Testimonios",
+    "nav.about": "Sobre Nosotros",
     "nav.pricing": "Precios",
     "nav.contact": "Contacto",
     
