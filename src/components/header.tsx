@@ -118,17 +118,18 @@ const Header: React.FC = () => {
     // If the link is to a specific page
     if (href !== '/' && href !== '/es') {
       // If the current language is Spanish and the href doesn't already have /es
-      if (isSpanish() && !href.startsWith('/es')) {
-        // Make sure we don't double-add /es for paths that already have an /es/ subfolder
-        if (href.includes('/es/')) {
-          return href;
+      if (isSpanish() && !href.includes('/es')) {
+        // For pages like /about, /partner, convert to /about/es, /partner/es
+        if (href.startsWith('/') && !href.includes('#')) {
+          return `${href}/es`;
         }
-        return `/es${href}`;
+        return href;
       }
       
       // If the current language is English and the href has /es
-      if (!isSpanish() && href.startsWith('/es')) {
-        return href.slice(3); // Remove /es prefix
+      if (!isSpanish() && href.includes('/es')) {
+        // For pages like /about/es, /partner/es, convert to /about, /partner
+        return href.replace('/es', '');
       }
     }
     
@@ -162,13 +163,13 @@ const Header: React.FC = () => {
               {t("nav.features")}
             </Link>
             <Link 
-              href={isSpanish() ? "/es/about" : "/about"}
+              href={isSpanish() ? "/about/es" : "/about"}
               className={`font-medium text-lg transition-colors ${isLinkActive("/about") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200 hover:text-[#ff007F]'}`}
             >
               {t("nav.about")}
             </Link>
             <Link 
-              href={isSpanish() ? "/es/partner" : "/partner"}
+              href={isSpanish() ? "/partner/es" : "/partner"}
               className={`font-medium text-lg transition-colors ${isLinkActive("/partner") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200 hover:text-[#ff007F]'}`}
             >
               {t("nav.partner")}
@@ -237,14 +238,14 @@ const Header: React.FC = () => {
               {t("nav.features")}
             </Link>
             <Link 
-              href={isSpanish() ? "/es/about" : "/about"}
+              href={isSpanish() ? "/about/es" : "/about"}
               className={`font-medium text-xl transition-colors ${isLinkActive("/about") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200'}`}
               onClick={toggleMobileMenu}
             >
               {t("nav.about")}
             </Link>
             <Link 
-              href={isSpanish() ? "/es/partner" : "/partner"}
+              href={isSpanish() ? "/partner/es" : "/partner"}
               className={`font-medium text-xl transition-colors ${isLinkActive("/partner") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200'}`}
               onClick={toggleMobileMenu}
             >
