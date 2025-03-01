@@ -162,79 +162,43 @@ export default function PartnerPage() {
                   <h3 className="text-lg font-semibold mb-4">Technologies We Work With</h3>
                   <div className="flex flex-wrap gap-6 items-center justify-center mt-4 bg-card rounded-lg border p-6 dark:bg-gray-800/50">
                     <div className="flex flex-col items-center">
-                      <div className="h-12 w-12 relative mb-2">
-                        <Image 
-                          src="https://raw.githubusercontent.com/vercel/next.js/canary/docs/public/images/next.svg" 
-                          alt="Next.js" 
-                          fill 
-                          className="object-contain"
-                        />
+                      <div className="h-12 w-12 relative mb-2 flex items-center justify-center bg-black text-white rounded-full">
+                        <span className="text-lg font-bold">N.js</span>
                       </div>
                       <span className="text-xs text-muted-foreground">Next.js</span>
                     </div>
                     
                     <div className="flex flex-col items-center">
-                      <div className="h-12 w-12 relative mb-2">
-                        <Image 
-                          src="https://raw.githubusercontent.com/rust-lang/rust-artwork/master/logo/rust-logo-blk.svg" 
-                          alt="Rust" 
-                          fill 
-                          className="object-contain"
-                        />
+                      <div className="h-12 w-12 relative mb-2 flex items-center justify-center bg-black text-orange-500 rounded-md">
+                        <span className="text-lg font-bold">RS</span>
                       </div>
                       <span className="text-xs text-muted-foreground">Rust</span>
                     </div>
                     
                     <div className="flex flex-col items-center">
-                      <div className="h-12 w-12 relative mb-2">
-                        <Image 
-                          src="https://polkadot.network/assets/img/logo-polkadot.svg" 
-                          alt="Polkadot" 
-                          fill 
-                          className="object-contain"
-                        />
+                      <div className="h-12 w-12 relative mb-2 flex items-center justify-center bg-violet-700 text-white rounded-full">
+                        <span className="text-sm font-bold">Polkadot</span>
                       </div>
                       <span className="text-xs text-muted-foreground">Polkadot</span>
                     </div>
                     
                     <div className="flex flex-col items-center">
-                      <div className="h-12 w-12 relative mb-2">
-                        <Image 
-                          src="https://reactjs.org/favicon.ico" 
-                          alt="React" 
-                          fill 
-                          className="object-contain"
-                        />
+                      <div className="h-12 w-12 relative mb-2 flex items-center justify-center bg-blue-50 text-cyan-500 rounded-full border border-cyan-500">
+                        <span className="text-2xl font-bold">⚛️</span>
                       </div>
                       <span className="text-xs text-muted-foreground">React</span>
                     </div>
                     
                     <div className="flex flex-col items-center">
-                      <div className="h-12 w-12 relative mb-2">
-                        <Image 
-                          src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/master/.github/logo-dark.svg" 
-                          alt="Tailwind CSS" 
-                          fill 
-                          className="object-contain dark:hidden"
-                        />
-                        <Image 
-                          src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/master/.github/logo-light.svg" 
-                          alt="Tailwind CSS" 
-                          fill 
-                          className="object-contain hidden dark:block"
-                        />
+                      <div className="h-12 w-12 relative mb-2 flex items-center justify-center bg-cyan-500 text-white rounded-md">
+                        <span className="text-lg font-bold">TW</span>
                       </div>
                       <span className="text-xs text-muted-foreground">Tailwind</span>
                     </div>
                     
                     <div className="flex flex-col items-center">
-                      <div className="h-12 w-12 relative mb-2">
-                        <Image 
-                          src="https://raw.githubusercontent.com/nodejs/nodejs.org/main/public/static/images/logo-hexagon.svg" 
-                          alt="Node.js" 
-                          fill 
-                          className="object-contain"
-                        />
+                      <div className="h-12 w-12 relative mb-2 flex items-center justify-center bg-green-600 text-white rounded-md">
+                        <span className="text-lg font-bold">Node</span>
                       </div>
                       <span className="text-xs text-muted-foreground">Node.js</span>
                     </div>
