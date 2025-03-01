@@ -41,7 +41,7 @@ export function Footer() {
             <span className="text-sm font-medium text-muted-foreground">{t("footer.followUs")}</span>
             <div className="flex items-center gap-4">
               <a 
-                href="https://github.com/ArsCodeAmatoria/tippsy-landing" 
+                href="https://github.com/Tippsy" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label={t("footer.githubAria")}
@@ -50,7 +50,7 @@ export function Footer() {
                 <Github className="h-5 w-5" />
               </a>
               <a 
-                href="https://twitter.com/TippsyApp" 
+                href="https://x.com/Tippsy_me" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label={t("footer.twitterAria")}
@@ -59,7 +59,7 @@ export function Footer() {
                 <Twitter className="h-5 w-5" />
               </a>
               <a 
-                href="https://instagram.com/tippsyapp" 
+                href="https://www.instagram.com/tippsy.me/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label={t("footer.instagramAria")}
