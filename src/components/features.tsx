@@ -30,22 +30,23 @@ const features = [
 export function Features() {
   return (
     <section id="features" className="py-16 md:py-24 lg:py-32">
-      <div className="container px-4 md:px-6">
-        <div className="mx-auto flex max-w-5xl flex-col items-center justify-center space-y-4 text-center">
+      <div className="container mx-auto px-6 md:px-8">
+        <div className="mx-auto flex max-w-4xl flex-col items-center justify-center space-y-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
+            className="w-full"
           >
-            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+            <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tighter md:text-4xl/tight">
               Everything you need to enhance your social life
             </h2>
-            <p className="mx-auto mt-4 max-w-[700px] text-muted-foreground md:text-xl">
+            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl">
               Tippsy combines social networking with bar discovery to create the ultimate nightlife companion.
             </p>
           </motion.div>
-          <div className="mx-auto mt-16 grid w-full max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
+          <div className="mx-auto mt-16 grid w-full max-w-4xl grid-cols-1 gap-8 md:grid-cols-2">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
