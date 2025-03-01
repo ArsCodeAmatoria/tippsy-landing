@@ -31,35 +31,43 @@ export default function TermsOfService() {
             </div>
             <h1 className="text-4xl font-bold tracking-tight mb-6 md:text-5xl">Terms of Service</h1>
             <p className="text-muted-foreground mb-4">Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+            <div className="flex gap-3 mt-4">
+              <span className="text-sm font-semibold">English</span>
+              <Link href="/terms/es" className="text-sm text-primary hover:underline">Español</Link>
+            </div>
           </div>
           
-          <div className="prose prose-gray dark:prose-invert max-w-none prose-headings:scroll-mt-28 prose-headings:font-semibold prose-h2:mt-10 prose-h2:text-2xl prose-h3:text-xl prose-img:rounded-md prose-img:border prose-img:bg-muted prose-pre:rounded-lg prose-pre:border">
-            <p className="lead">
+          <div className="prose prose-gray dark:prose-invert max-w-none prose-headings:scroll-mt-28 prose-headings:font-bold prose-h2:mt-10 prose-h2:text-2xl prose-h3:text-xl prose-img:rounded-md prose-img:border prose-img:bg-muted prose-pre:rounded-lg prose-pre:border">
+            <p className="lead text-lg">
               Please read these Terms of Service ("Terms", "Terms of Service") carefully before using 
               the Tippsy mobile application and website (the "Service") operated by Tippsy ("us", "we", or "our").
             </p>
             
-            <p>
+            <p className="mb-6">
               Your access to and use of the Service is conditioned on your acceptance of and compliance with 
               these Terms. These Terms apply to all visitors, users, and others who access or use the Service.
             </p>
             
-            <div className="my-8 rounded-lg border bg-amber-50 dark:bg-amber-950/30 p-4">
-              <p className="font-medium mb-0">
+            <div className="my-8 rounded-lg border bg-amber-50 dark:bg-amber-950/30 p-6 shadow-sm">
+              <p className="font-medium mb-0 text-lg">
                 <strong>By accessing or using the Service you agree to be bound by these Terms. If you disagree 
                 with any part of the terms, then you may not access the Service.</strong>
               </p>
             </div>
             
-            <h2 id="age-requirements">Age Requirements</h2>
+            <h2 id="age-requirements" className="text-primary-foreground">Age Requirements</h2>
             <p>
               Tippsy is intended for users who are of legal drinking age in their respective locations. 
+              This is typically 21 years of age in the United States and 18 or 19 in many other countries.
+            </p>
+            
+            <p>
               By using Tippsy, you represent and warrant that you are of legal drinking age in your 
               jurisdiction. We reserve the right to terminate your account if we discover that you are 
               under the legal drinking age.
             </p>
             
-            <h2 id="accounts">Accounts</h2>
+            <h2 id="accounts" className="text-primary-foreground">Accounts</h2>
             <p>
               When you create an account with us, you must provide information that is accurate, complete, 
               and current at all times. Failure to do so constitutes a breach of the Terms, which may 
@@ -73,7 +81,7 @@ export default function TermsOfService() {
               unauthorized use of your account.
             </p>
             
-            <h2 id="user-content">User Content</h2>
+            <h2 id="user-content" className="text-primary-foreground">User Content</h2>
             <p>
               Our Service allows you to post, link, store, share and otherwise make available certain 
               information, text, graphics, videos, or other material ("Content"). You are responsible for 
@@ -84,34 +92,41 @@ export default function TermsOfService() {
             <p>
               By posting Content on or through the Service, you represent and warrant that:
             </p>
-            <ul>
-              <li>The Content is yours (you own it) or you have the right to use it and grant us the rights and license as provided in these Terms.</li>
-              <li>The posting of your Content on or through the Service does not violate the privacy rights, publicity rights, copyrights, contract rights or any other rights of any person.</li>
+            <ul className="space-y-2">
+              <li>
+                <strong>You own the Content</strong> - The Content is yours (you own it) or you have the right to use it and grant us the rights and license as provided in these Terms.
+              </li>
+              <li>
+                <strong>No rights violations</strong> - The posting of your Content does not violate the privacy rights, publicity rights, copyrights, contract rights or any other rights of any person.
+              </li>
             </ul>
             
-            <h2 id="prohibited-conduct">Prohibited Conduct</h2>
+            <h2 id="prohibited-conduct" className="text-primary-foreground">Prohibited Conduct</h2>
             <p>You agree not to engage in any of the following prohibited activities:</p>
-            <ul>
-              <li>Using the Service for any illegal purpose or in violation of any local, state, national, or international law</li>
-              <li>Harassing, threatening, or intimidating any other users</li>
-              <li>Impersonating another person or entity</li>
-              <li>Posting content that is offensive, defamatory, obscene, or otherwise objectionable</li>
-              <li>Using the Service while intoxicated or under the influence of substances</li>
-              <li>Encouraging unsafe drinking practices</li>
-              <li>Attempting to circumvent any security features of the Service</li>
-              <li>Creating multiple accounts for the purpose of abusing promotions or evading bans</li>
+            <ul className="space-y-2">
+              <li><strong>Illegal activities</strong> - Using the Service for any illegal purpose or in violation of any local, state, national, or international law</li>
+              <li><strong>Harassment</strong> - Harassing, threatening, or intimidating any other users</li>
+              <li><strong>Impersonation</strong> - Impersonating another person or entity</li>
+              <li><strong>Offensive content</strong> - Posting content that is offensive, defamatory, obscene, or otherwise objectionable</li>
+              <li><strong>Intoxicated use</strong> - Using the Service while intoxicated or under the influence of substances</li>
+              <li><strong>Unsafe practices</strong> - Encouraging unsafe drinking practices</li>
+              <li><strong>Security circumvention</strong> - Attempting to circumvent any security features of the Service</li>
+              <li><strong>Multiple accounts</strong> - Creating multiple accounts for the purpose of abusing promotions or evading bans</li>
             </ul>
             
-            <h2 id="intellectual-property">Intellectual Property</h2>
+            <h2 id="intellectual-property" className="text-primary-foreground">Intellectual Property</h2>
             <p>
               The Service and its original content (excluding Content provided by users), features, and 
-              functionality are and will remain the exclusive property of Tippsy and its licensors. The 
-              Service is protected by copyright, trademark, and other laws of both the United States and 
+              functionality are and will remain the exclusive property of Tippsy and its licensors. 
+            </p>
+            
+            <p>
+              The Service is protected by copyright, trademark, and other laws of both the United States and 
               foreign countries. Our trademarks and trade dress may not be used in connection with any 
               product or service without the prior written consent of Tippsy.
             </p>
             
-            <h2 id="links-to-other-websites">Links To Other Web Sites</h2>
+            <h2 id="links-to-other-websites" className="text-primary-foreground">Links To Other Web Sites</h2>
             <p>
               Our Service may contain links to third-party websites or services that are not owned or 
               controlled by Tippsy.
@@ -125,7 +140,7 @@ export default function TermsOfService() {
               content, goods, or services available on or through any such websites or services.
             </p>
             
-            <h2 id="termination">Termination</h2>
+            <h2 id="termination" className="text-primary-foreground">Termination</h2>
             <p>
               We may terminate or suspend your account immediately, without prior notice or liability, for 
               any reason whatsoever, including without limitation if you breach the Terms.
@@ -136,7 +151,7 @@ export default function TermsOfService() {
               terminate your account, you may simply discontinue using the Service.
             </p>
             
-            <h2 id="limitation-of-liability">Limitation of Liability</h2>
+            <h2 id="limitation-of-liability" className="text-primary-foreground">Limitation of Liability</h2>
             <p>
               To the maximum extent permitted by applicable law, in no event shall Tippsy, its affiliates, 
               agents, directors, employees, suppliers, or licensors be liable for any indirect, punitive, 
@@ -145,7 +160,7 @@ export default function TermsOfService() {
               or relating to your use of, or inability to use, the Service.
             </p>
             
-            <h2 id="disclaimers">Disclaimers</h2>
+            <h2 id="disclaimers" className="text-primary-foreground">Disclaimers</h2>
             <p>
               Your use of the Service is at your sole risk. The Service is provided on an "AS IS" and "AS 
               AVAILABLE" basis. The Service is provided without warranties of any kind, whether express or 
@@ -154,13 +169,16 @@ export default function TermsOfService() {
             </p>
             
             <p>
-              Tippsy, its subsidiaries, affiliates, and its licensors do not warrant that: (a) the Service 
-              will function uninterrupted, secure or available at any particular time or location; (b) any 
-              errors or defects will be corrected; (c) the Service is free of viruses or other harmful 
-              components; or (d) the results of using the Service will meet your requirements.
+              Tippsy, its subsidiaries, affiliates, and its licensors do not warrant that:
             </p>
+            <ul className="space-y-2">
+              <li><strong>Continuous service</strong> - The Service will function uninterrupted, secure or available at any particular time or location</li>
+              <li><strong>Error correction</strong> - Any errors or defects will be corrected</li>
+              <li><strong>Security guarantees</strong> - The Service is free of viruses or other harmful components</li>
+              <li><strong>Satisfaction</strong> - The results of using the Service will meet your requirements</li>
+            </ul>
             
-            <h2 id="governing-law">Governing Law</h2>
+            <h2 id="governing-law" className="text-primary-foreground">Governing Law</h2>
             <p>
               These Terms shall be governed and construed in accordance with the laws of the United States, 
               without regard to its conflict of law provisions.
@@ -172,15 +190,20 @@ export default function TermsOfService() {
               court, the remaining provisions of these Terms will remain in effect.
             </p>
             
-            <h2 id="alcohol-responsibility">Alcohol Responsibility</h2>
+            <h2 id="alcohol-responsibility" className="text-primary-foreground">Alcohol Responsibility</h2>
             <p>
               Tippsy promotes responsible drinking and does not encourage excessive or underage alcohol 
               consumption. Users are expected to drink responsibly and in accordance with local laws and 
-              regulations. Tippsy is not responsible for any damages or liabilities that may arise from the 
-              misuse of alcohol or intoxication.
+              regulations.
             </p>
             
-            <h2 id="changes">Changes</h2>
+            <p>
+              Tippsy is not responsible for any damages or liabilities that may arise from the 
+              misuse of alcohol or intoxication. By using our Service, you agree to use alcohol responsibly
+              and to never drink and drive.
+            </p>
+            
+            <h2 id="changes" className="text-primary-foreground">Changes to Terms</h2>
             <p>
               We reserve the right, at our sole discretion, to modify or replace these Terms at any time. 
               If a revision is material, we will try to provide at least 30 days' notice prior to any new 
@@ -193,11 +216,12 @@ export default function TermsOfService() {
             </p>
             
             <div className="rounded-lg border bg-card p-6 shadow-sm mt-10">
-              <h2 id="contact-us" className="mt-0">Contact Us</h2>
-              <p className="mb-0">
+              <h2 id="contact-us" className="mt-0 font-bold text-2xl">Contact Us</h2>
+              <p className="mb-2">
                 If you have any questions about these Terms, please contact us at:
-                <br />
-                <a href="mailto:legal@tippsy.app" className="text-primary hover:underline">legal@tippsy.app</a>
+              </p>
+              <p className="mb-0">
+                <a href="mailto:legal@tippsy.app" className="text-primary hover:underline font-medium text-lg">legal@tippsy.app</a>
               </p>
             </div>
           </div>

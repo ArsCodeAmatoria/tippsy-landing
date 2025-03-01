@@ -22,6 +22,7 @@ type TranslationKeys =
   | "features.deals.title" | "features.deals.description"
   | "features.safety.title" | "features.safety.description"
   | "footer.privacy" | "footer.terms" | "footer.contact" | "footer.about" | "footer.copyright"
+  | "legal.privacyPolicy" | "legal.termsOfService" | "legal.lastUpdated" | "legal.back" | "legal.legalLabel" | "legal.contactUs" | "legal.contactUsText"
 
 type TranslationRecord = Record<TranslationKeys, string>
 type Translations = Record<LanguageCode, TranslationRecord>
@@ -71,7 +72,16 @@ const translations: Translations = {
     "footer.terms": "Terms & Conditions",
     "footer.contact": "Contact",
     "footer.about": "About Us",
-    "footer.copyright": "© 2025 Tippsy. All rights reserved."
+    "footer.copyright": "© 2025 Tippsy. All rights reserved.",
+    
+    // Legal pages
+    "legal.privacyPolicy": "Privacy Policy",
+    "legal.termsOfService": "Terms of Service",
+    "legal.lastUpdated": "Last Updated",
+    "legal.back": "Back to Home",
+    "legal.legalLabel": "Legal",
+    "legal.contactUs": "Contact Us",
+    "legal.contactUsText": "If you have any questions about this document, please contact us at:"
   },
   es: {
     "hero.title": "Conoce gente nueva y encuentra bares geniales con",
@@ -117,7 +127,16 @@ const translations: Translations = {
     "footer.terms": "Términos y Condiciones",
     "footer.contact": "Contacto",
     "footer.about": "Sobre Nosotros",
-    "footer.copyright": "© 2025 Tippsy. Todos los derechos reservados."
+    "footer.copyright": "© 2025 Tippsy. Todos los derechos reservados.",
+    
+    // Legal pages
+    "legal.privacyPolicy": "Política de Privacidad",
+    "legal.termsOfService": "Términos de Servicio",
+    "legal.lastUpdated": "Última Actualización",
+    "legal.back": "Volver al Inicio",
+    "legal.legalLabel": "Legal",
+    "legal.contactUs": "Contáctenos",
+    "legal.contactUsText": "Si tiene alguna pregunta sobre este documento, contáctenos en:"
   }
 }
 
