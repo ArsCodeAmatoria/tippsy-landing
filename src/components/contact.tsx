@@ -132,7 +132,8 @@ export function Contact() {
                         alt="Powered by Mailchimp" 
                         width={200} 
                         height={40} 
-                        className="h-auto max-w-[200px]"
+                        style={{ height: 'auto' }}
+                        className="max-w-[200px]"
                       />
                     </Link>
                   </div>
