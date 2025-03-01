@@ -87,7 +87,7 @@ export default function PrivacyPolicyES() {
             <p>
               Utilizamos la información que recopilamos de varias formas, incluyendo:
             </p>
-            <ul className="space-y-2">
+            <ul className="space-y-2 dark:text-gray-300">
               <li><strong>Proporcionar y mantener nuestro Servicio</strong> - Para operar nuestra plataforma y ofrecerte nuestros servicios</li>
               <li><strong>Mejorar nuestro Servicio</strong> - Para entender cómo nuestros usuarios utilizan el Servicio y mejorar la experiencia</li>
               <li><strong>Personalizar tu experiencia</strong> - Para recomendarte bares, eventos y conectarte con personas basadas en tus preferencias</li>
@@ -101,7 +101,7 @@ export default function PrivacyPolicyES() {
             <p>
               Podemos compartir tu información en las siguientes situaciones:
             </p>
-            <ul className="space-y-2">
+            <ul className="space-y-2 dark:text-gray-300">
               <li><strong>Con otros usuarios</strong> - Tu perfil público y la información que elijas compartir serán visibles para otros usuarios de la aplicación</li>
               <li><strong>Con proveedores de servicios</strong> - Podemos compartir tu información con proveedores de servicios terceros para facilitar nuestro Servicio</li>
               <li><strong>Para transferencias de negocios</strong> - Podemos compartir o transferir tu información en conexión con, o durante negociaciones de, cualquier fusión, venta de activos de la empresa, financiamiento o adquisición</li>
@@ -135,7 +135,7 @@ export default function PrivacyPolicyES() {
               Dependiendo de tu ubicación, puedes tener ciertos derechos relacionados con tu información 
               personal, como:
             </p>
-            <ul className="space-y-2">
+            <ul className="space-y-2 dark:text-gray-300">
               <li><strong>Derecho de acceso</strong> - El derecho a solicitar copias de tu información personal</li>
               <li><strong>Derecho de rectificación</strong> - El derecho a solicitar que corrijamos información que creas que es inexacta o incompleta</li>
               <li><strong>Derecho de eliminación</strong> - El derecho a solicitar que eliminemos tu información personal</li>

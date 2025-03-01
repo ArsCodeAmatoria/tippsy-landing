@@ -179,41 +179,53 @@ export default function TermsOfService() {
             </ul>
             
             <h2 id="governing-law" className="text-primary-foreground">Governing Law</h2>
-            <p>
-              These Terms shall be governed and construed in accordance with the laws of the United States, 
-              without regard to its conflict of law provisions.
-            </p>
-            
-            <p>
-              Our failure to enforce any right or provision of these Terms will not be considered a waiver 
-              of those rights. If any provision of these Terms is held to be invalid or unenforceable by a 
-              court, the remaining provisions of these Terms will remain in effect.
-            </p>
+            <div className="space-y-4">
+              <p>
+                These Terms shall be governed and construed in accordance with the laws of the United States, 
+                without regard to its conflict of law provisions.
+              </p>
+              
+              <div className="rounded-lg border p-4 bg-muted/40 dark:bg-gray-800/50 dark:border-gray-700">
+                <p className="mb-0">
+                  Our failure to enforce any right or provision of these Terms will not be considered a waiver 
+                  of those rights. If any provision of these Terms is held to be invalid or unenforceable by a 
+                  court, the remaining provisions of these Terms will remain in effect.
+                </p>
+              </div>
+            </div>
             
             <h2 id="alcohol-responsibility" className="text-primary-foreground">Alcohol Responsibility</h2>
-            <p>
-              Tippsy promotes responsible drinking and does not encourage excessive or underage alcohol 
-              consumption. Users are expected to drink responsibly and in accordance with local laws and 
-              regulations.
-            </p>
-            
-            <p>
-              Tippsy is not responsible for any damages or liabilities that may arise from the 
-              misuse of alcohol or intoxication. By using our Service, you agree to use alcohol responsibly
-              and to never drink and drive.
-            </p>
+            <div className="space-y-4">
+              <p>
+                Tippsy promotes responsible drinking and does not encourage excessive or underage alcohol 
+                consumption. Users are expected to drink responsibly and in accordance with local laws and 
+                regulations.
+              </p>
+              
+              <div className="rounded-lg border bg-red-50 dark:bg-red-950/30 p-4 shadow-sm border-red-200 dark:border-red-900/50">
+                <p className="font-medium mb-0">
+                  <strong>Tippsy is not responsible for any damages or liabilities that may arise from the 
+                  misuse of alcohol or intoxication. By using our Service, you agree to use alcohol responsibly
+                  and to never drink and drive.</strong>
+                </p>
+              </div>
+            </div>
             
             <h2 id="changes" className="text-primary-foreground">Changes to Terms</h2>
-            <p>
-              We reserve the right, at our sole discretion, to modify or replace these Terms at any time. 
-              If a revision is material, we will try to provide at least 30 days' notice prior to any new 
-              terms taking effect. What constitutes a material change will be determined at our sole discretion.
-            </p>
-            
-            <p>
-              By continuing to access or use our Service after those revisions become effective, you agree 
-              to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.
-            </p>
+            <div className="space-y-4">
+              <p>
+                We reserve the right, at our sole discretion, to modify or replace these Terms at any time. 
+                If a revision is material, we will try to provide at least 30 days' notice prior to any new 
+                terms taking effect. What constitutes a material change will be determined at our sole discretion.
+              </p>
+              
+              <div className="rounded-lg border p-4 bg-muted/40 dark:bg-gray-800/50 dark:border-gray-700">
+                <p className="mb-0">
+                  By continuing to access or use our Service after those revisions become effective, you agree 
+                  to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.
+                </p>
+              </div>
+            </div>
             
             <div className="rounded-lg border bg-card p-6 shadow-sm mt-10 dark:bg-gray-900 dark:border-gray-800">
               <h2 id="contact-us" className="mt-0 font-bold text-2xl">Contact Us</h2>

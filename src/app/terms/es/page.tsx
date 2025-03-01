@@ -175,7 +175,7 @@ export default function TermsOfServiceES() {
             <p>
               Tippsy, sus subsidiarias, afiliados y sus licenciantes no garantizan que:
             </p>
-            <ul className="space-y-2">
+            <ul className="space-y-2 dark:text-gray-300">
               <li><strong>Servicio continuo</strong> - El Servicio funcionará ininterrumpido, seguro o disponible en cualquier momento o ubicación particular</li>
               <li><strong>Corrección de errores</strong> - Cualquier error o defecto será corregido</li>
               <li><strong>Garantías de seguridad</strong> - El Servicio está libre de virus u otros componentes dañinos</li>
@@ -183,43 +183,55 @@ export default function TermsOfServiceES() {
             </ul>
             
             <h2 id="ley-aplicable" className="text-primary-foreground">Ley Aplicable</h2>
-            <p>
-              Estos Términos se regirán y construirán de acuerdo con las leyes de los Estados Unidos, 
-              sin tener en cuenta sus disposiciones sobre conflictos de leyes.
-            </p>
-            
-            <p>
-              Nuestro incumplimiento en hacer valer cualquier derecho o disposición de estos Términos no se 
-              considerará una renuncia a esos derechos. Si alguna disposición de estos Términos se considera 
-              inválida o inaplicable por un tribunal, las disposiciones restantes de estos Términos 
-              permanecerán en vigor.
-            </p>
+            <div className="space-y-4">
+              <p>
+                Estos Términos se regirán y construirán de acuerdo con las leyes de los Estados Unidos, 
+                sin tener en cuenta sus disposiciones sobre conflictos de leyes.
+              </p>
+              
+              <div className="rounded-lg border p-4 bg-muted/40 dark:bg-gray-800/50 dark:border-gray-700">
+                <p className="mb-0">
+                  Nuestro incumplimiento en hacer valer cualquier derecho o disposición de estos Términos no se 
+                  considerará una renuncia a esos derechos. Si alguna disposición de estos Términos se considera 
+                  inválida o inaplicable por un tribunal, las disposiciones restantes de estos Términos 
+                  permanecerán en vigor.
+                </p>
+              </div>
+            </div>
             
             <h2 id="responsabilidad-con-el-alcohol" className="text-primary-foreground">Responsabilidad con el Alcohol</h2>
-            <p>
-              Tippsy promueve el consumo responsable y no fomenta el consumo excesivo o de menores de edad. 
-              Se espera que los usuarios beban responsablemente y de acuerdo con las leyes y regulaciones locales.
-            </p>
-            
-            <p>
-              Tippsy no es responsable por cualquier daño o responsabilidad que pueda surgir del mal uso del 
-              alcohol o intoxicación. Al usar nuestro Servicio, aceptas usar el alcohol responsablemente y 
-              nunca conducir bajo los efectos del alcohol.
-            </p>
+            <div className="space-y-4">
+              <p>
+                Tippsy promueve el consumo responsable y no fomenta el consumo excesivo o de menores de edad. 
+                Se espera que los usuarios beban responsablemente y de acuerdo con las leyes y regulaciones locales.
+              </p>
+              
+              <div className="rounded-lg border bg-red-50 dark:bg-red-950/30 p-4 shadow-sm border-red-200 dark:border-red-900/50">
+                <p className="font-medium mb-0">
+                  <strong>Tippsy no es responsable por cualquier daño o responsabilidad que pueda surgir del mal uso del 
+                  alcohol o intoxicación. Al usar nuestro Servicio, aceptas usar el alcohol responsablemente y 
+                  nunca conducir bajo los efectos del alcohol.</strong>
+                </p>
+              </div>
+            </div>
             
             <h2 id="cambios-a-los-terminos" className="text-primary-foreground">Cambios a los Términos</h2>
-            <p>
-              Nos reservamos el derecho, a nuestro único criterio, de modificar o reemplazar estos Términos 
-              en cualquier momento. Si una revisión es material, intentaremos proporcionar al menos 30 días 
-              de aviso antes de que los nuevos términos entren en vigor. Lo que constituye un cambio material 
-              será determinado a nuestro único criterio.
-            </p>
-            
-            <p>
-              Al continuar accediendo o usando nuestro Servicio después de que esas revisiones entren en vigor, 
-              aceptas estar sujeto a los términos revisados. Si no estás de acuerdo con los nuevos términos, 
-              por favor deja de usar el Servicio.
-            </p>
+            <div className="space-y-4">
+              <p>
+                Nos reservamos el derecho, a nuestro único criterio, de modificar o reemplazar estos Términos 
+                en cualquier momento. Si una revisión es material, intentaremos proporcionar al menos 30 días 
+                de aviso antes de que los nuevos términos entren en vigor. Lo que constituye un cambio material 
+                será determinado a nuestro único criterio.
+              </p>
+              
+              <div className="rounded-lg border p-4 bg-muted/40 dark:bg-gray-800/50 dark:border-gray-700">
+                <p className="mb-0">
+                  Al continuar accediendo o usando nuestro Servicio después de que esas revisiones entren en vigor, 
+                  aceptas estar sujeto a los términos revisados. Si no estás de acuerdo con los nuevos términos, 
+                  por favor deja de usar el Servicio.
+                </p>
+              </div>
+            </div>
             
             <div className="rounded-lg border bg-card p-6 shadow-sm mt-10 dark:bg-gray-900 dark:border-gray-800">
               <h2 id="contactanos" className="mt-0 font-bold text-2xl">Contáctanos</h2>

@@ -77,7 +77,7 @@ export default function PrivacyPolicy() {
               We may also collect information that your browser or device sends whenever 
               you visit our website or use our app:
             </p>
-            <ul className="space-y-2">
+            <ul className="space-y-2 dark:text-gray-300">
               <li><strong>IP address</strong> - Your device's internet protocol address</li>
               <li><strong>Browser details</strong> - Type, version, and settings</li>
               <li><strong>Device information</strong> - Type, model, and operating system</li>
@@ -88,7 +88,7 @@ export default function PrivacyPolicy() {
             
             <h2 id="how-we-use-your-information" className="text-primary-foreground">How We Use Your Information</h2>
             <p>We may use the information we collect for various purposes, including to:</p>
-            <ul className="space-y-2">
+            <ul className="space-y-2 dark:text-gray-300">
               <li><strong>Provide our services</strong> - Delivering, maintaining, and improving our platform</li>
               <li><strong>Personalize your experience</strong> - Creating and updating your account</li>
               <li><strong>Connect users</strong> - Matching you with others based on preferences</li>
@@ -127,7 +127,7 @@ export default function PrivacyPolicy() {
             
             <h2 id="your-data-protection-rights" className="text-primary-foreground">Your Data Protection Rights</h2>
             <p>Depending on your location, you may have the following rights:</p>
-            <ul className="space-y-2">
+            <ul className="space-y-2 dark:text-gray-300">
               <li><strong>Right to access</strong> - The right to access the personal information we have about you</li>
               <li><strong>Right to rectification</strong> - The right to request correction of inaccurate personal information</li>
               <li><strong>Right to erasure</strong> - The right to request deletion of your personal information</li>
