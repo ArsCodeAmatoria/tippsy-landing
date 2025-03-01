@@ -9,7 +9,37 @@ import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
 
 export function Hero() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
+
+  // App mockup translations
+  const appTexts = {
+    en: {
+      discover: "Discover Tonight",
+      featured: "Featured",
+      cocktailBar: "Cocktail Bar",
+      milesAway: "miles away",
+      meetFriends: "Meet New Friends",
+      likes: "Likes cocktails",
+      home: "Home",
+      explore: "Explore",
+      friends: "Friends",
+      profile: "Profile"
+    },
+    es: {
+      discover: "Descubre Esta Noche",
+      featured: "Destacado",
+      cocktailBar: "Bar de Cócteles",
+      milesAway: "km de distancia",
+      meetFriends: "Conoce Nuevos Amigos",
+      likes: "Le gustan los cócteles",
+      home: "Inicio",
+      explore: "Explorar",
+      friends: "Amigos",
+      profile: "Perfil"
+    }
+  }
+
+  const app = appTexts[language]
 
   return (
     <section className="relative overflow-hidden py-16 md:py-24 lg:py-32">
@@ -114,13 +144,13 @@ export function Hero() {
                 <div className="flex-1 overflow-hidden p-3 space-y-3">
                   {/* Discover Section */}
                   <div className="bg-white dark:bg-black/30 rounded-xl p-3 shadow-sm">
-                    <div className="text-lg font-bold mb-2">Discover Tonight</div>
+                    <div className="text-lg font-bold mb-2">{app.discover}</div>
                     <div className="flex space-x-3 overflow-x-auto pb-2">
                       {[1, 2, 3].map((i) => (
                         <div key={i} className="flex-none w-32 h-40 rounded-lg bg-gradient-to-br from-primary/80 to-blue-400/80 flex flex-col justify-end p-2">
-                          <div className="text-xs text-white/90 font-medium">Featured</div>
-                          <div className="text-sm text-white font-bold">Cocktail Bar {i}</div>
-                          <div className="text-xs text-white/90">2.{i} miles away</div>
+                          <div className="text-xs text-white/90 font-medium">{app.featured}</div>
+                          <div className="text-sm text-white font-bold">{app.cocktailBar} {i}</div>
+                          <div className="text-xs text-white/90">2.{i} {app.milesAway}</div>
                         </div>
                       ))}
                     </div>
@@ -128,14 +158,14 @@ export function Hero() {
                   
                   {/* Match Section */}
                   <div className="bg-white dark:bg-black/30 rounded-xl p-3 shadow-sm">
-                    <div className="text-lg font-bold mb-2">Meet New Friends</div>
+                    <div className="text-lg font-bold mb-2">{app.meetFriends}</div>
                     <div className="grid grid-cols-2 gap-3">
                       {[1, 2, 3, 4].map((i) => (
                         <div key={i} className="rounded-lg bg-gray-100 dark:bg-gray-800 p-2 flex items-center space-x-2">
                           <div className="w-10 h-10 rounded-full bg-primary/20"></div>
                           <div>
                             <div className="text-sm font-medium">Alex {i}</div>
-                            <div className="text-xs text-muted-foreground">Likes cocktails</div>
+                            <div className="text-xs text-muted-foreground">{app.likes}</div>
                           </div>
                         </div>
                       ))}
@@ -150,14 +180,14 @@ export function Hero() {
                       <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                       <polyline points="9 22 9 12 15 12 15 22" />
                     </svg>
-                    <span className="text-[10px] text-primary font-medium">Home</span>
+                    <span className="text-[10px] text-primary font-medium">{app.home}</span>
                   </div>
                   <div className="flex flex-col items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 text-muted-foreground">
                       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
                       <circle cx="12" cy="10" r="3" />
                     </svg>
-                    <span className="text-[10px] text-muted-foreground">Explore</span>
+                    <span className="text-[10px] text-muted-foreground">{app.explore}</span>
                   </div>
                   <div className="flex flex-col items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 text-muted-foreground">
@@ -166,7 +196,7 @@ export function Hero() {
                       <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
                       <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                     </svg>
-                    <span className="text-[10px] text-muted-foreground">Friends</span>
+                    <span className="text-[10px] text-muted-foreground">{app.friends}</span>
                   </div>
                   <div className="flex flex-col items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 text-muted-foreground">
@@ -174,7 +204,7 @@ export function Hero() {
                       <circle cx="12" cy="10" r="3" />
                       <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
                     </svg>
-                    <span className="text-[10px] text-muted-foreground">Profile</span>
+                    <span className="text-[10px] text-muted-foreground">{app.profile}</span>
                   </div>
                 </div>
               </div>

@@ -16,6 +16,12 @@ type TranslationKeys =
   | "nav.features" | "nav.testimonials" | "nav.pricing" | "nav.contact"
   | "cta.title" | "cta.subtitle" | "cta.joinWaitlist" | "cta.learnMore"
   | "contact.title" | "contact.subtitle" | "contact.waitlistTitle" | "contact.waitlistInfo" | "contact.thanks" | "contact.emailLabel" | "contact.emailPlaceholder" | "contact.submitBtn"
+  | "features.title" | "features.subtitle"
+  | "features.social.title" | "features.social.description" 
+  | "features.bars.title" | "features.bars.description"
+  | "features.deals.title" | "features.deals.description"
+  | "features.safety.title" | "features.safety.description"
+  | "footer.privacy" | "footer.terms" | "footer.contact" | "footer.about" | "footer.copyright"
 
 type TranslationRecord = Record<TranslationKeys, string>
 type Translations = Record<LanguageCode, TranslationRecord>
@@ -47,7 +53,24 @@ const translations: Translations = {
     "contact.thanks": "Thanks for joining the waitlist! We'll notify you when Tippsy is ready.",
     "contact.emailLabel": "Email Address",
     "contact.emailPlaceholder": "your.email@example.com",
-    "contact.submitBtn": "Join Waitlist"
+    "contact.submitBtn": "Join Waitlist",
+    
+    "features.title": "Everything you need to enhance your social life",
+    "features.subtitle": "Tippsy combines social networking with bar discovery to create the ultimate nightlife companion.",
+    "features.social.title": "Social Matchmaking",
+    "features.social.description": "Connect with like-minded people based on interests, location, and preferences.",
+    "features.bars.title": "Bar Discovery",
+    "features.bars.description": "Find the best bars nearby with ratings, reviews, and real-time availability.",
+    "features.deals.title": "Exclusive Deals",
+    "features.deals.description": "Enjoy special discounts and promotions at partner bars and venues.",
+    "features.safety.title": "Safe Community",
+    "features.safety.description": "Verified profiles and community guidelines ensure a safe and respectful experience.",
+    
+    "footer.privacy": "Privacy Policy",
+    "footer.terms": "Terms & Conditions",
+    "footer.contact": "Contact",
+    "footer.about": "About Us",
+    "footer.copyright": "© 2025 Tippsy. All rights reserved."
   },
   es: {
     "hero.title": "Conoce gente nueva y encuentra bares geniales con",
@@ -75,7 +98,24 @@ const translations: Translations = {
     "contact.thanks": "¡Gracias por unirte a la lista de espera! Te avisaremos cuando Tippsy esté listo.",
     "contact.emailLabel": "Correo Electrónico",
     "contact.emailPlaceholder": "tu.correo@ejemplo.com",
-    "contact.submitBtn": "Unirse a la Lista"
+    "contact.submitBtn": "Unirse a la Lista",
+    
+    "features.title": "Todo lo que necesitas para mejorar tu vida social",
+    "features.subtitle": "Tippsy combina las redes sociales con el descubrimiento de bares para crear el compañero perfecto para tu vida nocturna.",
+    "features.social.title": "Conexiones Sociales",
+    "features.social.description": "Conéctate con personas afines basadas en intereses, ubicación y preferencias.",
+    "features.bars.title": "Descubre Bares",
+    "features.bars.description": "Encuentra los mejores bares cercanos con calificaciones, reseñas y disponibilidad en tiempo real.",
+    "features.deals.title": "Ofertas Exclusivas",
+    "features.deals.description": "Disfruta de descuentos especiales y promociones en bares y lugares asociados.",
+    "features.safety.title": "Comunidad Segura",
+    "features.safety.description": "Perfiles verificados y pautas comunitarias que garantizan una experiencia segura y respetuosa.",
+    
+    "footer.privacy": "Política de Privacidad",
+    "footer.terms": "Términos y Condiciones",
+    "footer.contact": "Contacto",
+    "footer.about": "Sobre Nosotros",
+    "footer.copyright": "© 2025 Tippsy. Todos los derechos reservados."
   }
 }
 

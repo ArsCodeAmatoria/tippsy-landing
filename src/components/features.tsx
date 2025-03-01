@@ -3,31 +3,34 @@
 import * as React from "react"
 import { motion } from "framer-motion"
 import { Users, MapPin, Beer, Heart } from "lucide-react"
-
-const features = [
-  {
-    icon: <Users className="h-10 w-10 text-primary" />,
-    title: "Social Matchmaking",
-    description: "Connect with like-minded people based on interests, location, and preferences.",
-  },
-  {
-    icon: <MapPin className="h-10 w-10 text-primary" />,
-    title: "Bar Discovery",
-    description: "Find the best bars nearby with ratings, reviews, and real-time availability.",
-  },
-  {
-    icon: <Beer className="h-10 w-10 text-primary" />,
-    title: "Exclusive Deals",
-    description: "Enjoy special discounts and promotions at partner bars and venues.",
-  },
-  {
-    icon: <Heart className="h-10 w-10 text-primary" />,
-    title: "Safe Community",
-    description: "Verified profiles and community guidelines ensure a safe and respectful experience.",
-  },
-]
+import { useLanguage } from "@/contexts/language-context"
 
 export function Features() {
+  const { t } = useLanguage()
+  
+  const features = [
+    {
+      icon: <Users className="h-10 w-10 text-primary" />,
+      title: t("features.social.title"),
+      description: t("features.social.description"),
+    },
+    {
+      icon: <MapPin className="h-10 w-10 text-primary" />,
+      title: t("features.bars.title"),
+      description: t("features.bars.description"),
+    },
+    {
+      icon: <Beer className="h-10 w-10 text-primary" />,
+      title: t("features.deals.title"),
+      description: t("features.deals.description"),
+    },
+    {
+      icon: <Heart className="h-10 w-10 text-primary" />,
+      title: t("features.safety.title"),
+      description: t("features.safety.description"),
+    },
+  ]
+
   return (
     <section id="features" className="py-16 md:py-24 lg:py-32">
       <div className="container mx-auto px-6 md:px-8">
@@ -40,10 +43,10 @@ export function Features() {
             className="w-full"
           >
             <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tighter md:text-4xl/tight">
-              Everything you need to enhance your social life
+              {t("features.title")}
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl">
-              Tippsy combines social networking with bar discovery to create the ultimate nightlife companion.
+              {t("features.subtitle")}
             </p>
           </motion.div>
           <div className="mx-auto mt-16 grid w-full max-w-4xl grid-cols-1 gap-8 md:grid-cols-2">
