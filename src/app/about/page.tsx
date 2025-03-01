@@ -15,12 +15,20 @@ export default function AboutPage() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-6 md:px-8 flex h-16 items-center justify-between">
           <Logo />
-          <Link 
-            href="/" 
-            className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-primary"
-          >
-            <ArrowLeft className="h-4 w-4" /> Back to Home
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link 
+              href="/about/es" 
+              className="text-sm font-medium text-muted-foreground hover:text-primary"
+            >
+              Español
+            </Link>
+            <Link 
+              href="/" 
+              className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-primary"
+            >
+              <ArrowLeft className="h-4 w-4" /> Back to Home
+            </Link>
+          </div>
         </div>
       </header>
       
@@ -69,12 +77,25 @@ export default function AboutPage() {
               
               <div className="space-y-4">
                 <h2 id="bars-the-perfect-meeting-place" className="text-primary-foreground">Bars: The Perfect Meeting Place</h2>
-                <p>
-                  Bars are more than just great social spots—they're safe, public spaces where you can enjoy 
-                  yourself without worry. With ID checks, credit card records, and staff around, you're never 
-                  truly alone. Whether you're looking for a casual drink, a new friend, or a potential spark, 
-                  Tippsy makes meeting up simple and spontaneous.
-                </p>
+                <div className="rounded-lg border p-4 bg-amber-50/50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-900/30 shadow-sm">
+                  <p className="mb-0">
+                    Bars are more than just great social spots—they're <strong>safe, public spaces</strong> where you can enjoy 
+                    yourself without worry. With ID checks, credit card records, and staff around, you're never 
+                    truly alone. Whether you're looking for a casual drink, a new friend, or a potential spark, 
+                    Tippsy makes meeting up <strong>simple and spontaneous</strong>.
+                  </p>
+                  <div className="grid gap-3 grid-cols-1 sm:grid-cols-3 mt-4">
+                    <div className="rounded bg-white/70 dark:bg-gray-800/50 p-2 text-center">
+                      <p className="text-sm font-medium mb-0">✓ ID Verification</p>
+                    </div>
+                    <div className="rounded bg-white/70 dark:bg-gray-800/50 p-2 text-center">
+                      <p className="text-sm font-medium mb-0">✓ Public Environment</p>
+                    </div>
+                    <div className="rounded bg-white/70 dark:bg-gray-800/50 p-2 text-center">
+                      <p className="text-sm font-medium mb-0">✓ Staff Present</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               
               <div className="space-y-4">

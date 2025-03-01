@@ -6,7 +6,7 @@ import { Logo } from "./logo"
 import { useLanguage } from "@/contexts/language-context"
 
 export function Footer() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   
   return (
     <footer className="border-t py-12 md:py-16">
@@ -14,11 +14,11 @@ export function Footer() {
         <div className="mx-auto max-w-2xl flex flex-col items-center justify-center gap-6 text-center">
           <Logo />
           <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
-            <Link href="/privacy" className="transition-colors hover:text-foreground">
+            <Link href={language === "es" ? "/privacy/es" : "/privacy"} className="transition-colors hover:text-foreground">
               {t("footer.privacy")}
             </Link>
             <div className="h-4 w-px bg-border"></div>
-            <Link href="/terms" className="transition-colors hover:text-foreground">
+            <Link href={language === "es" ? "/terms/es" : "/terms"} className="transition-colors hover:text-foreground">
               {t("footer.terms")}
             </Link>
             <div className="h-4 w-px bg-border"></div>
@@ -26,7 +26,7 @@ export function Footer() {
               {t("footer.contact")}
             </Link>
             <div className="h-4 w-px bg-border"></div>
-            <Link href="/about" className="transition-colors hover:text-foreground">
+            <Link href={language === "es" ? "/about/es" : "/about"} className="transition-colors hover:text-foreground">
               {t("footer.about")}
             </Link>
           </div>

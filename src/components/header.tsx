@@ -10,7 +10,7 @@ import { LanguageSelector } from "@/components/language-selector"
 import { useLanguage } from "@/contexts/language-context"
 
 export function Header() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -22,7 +22,7 @@ export function Header() {
           <Link href="#features" className="text-sm font-medium transition-colors hover:text-primary">
             {t("nav.features")}
           </Link>
-          <Link href="/about" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link href={language === "es" ? "/about/es" : "/about"} className="text-sm font-medium transition-colors hover:text-primary">
             {t("nav.about")}
           </Link>
           <Link href="#pricing" className="text-sm font-medium transition-colors hover:text-primary">

@@ -43,6 +43,37 @@ export function LanguageSelector() {
 
   const handleLanguageChange = (lang: Language) => {
     setLanguage(lang.code)
+    
+    // Handle path-based language switching for specific pages
+    const currentPath = window.location.pathname
+    
+    // Check if we're on an about page
+    if (currentPath === '/about' || currentPath === '/about/es') {
+      // Redirect to the proper language version
+      if (lang.code === 'es') {
+        window.location.href = '/about/es';
+      } else {
+        window.location.href = '/about';
+      }
+    }
+    
+    // Check if we're on terms page
+    if (currentPath === '/terms' || currentPath === '/terms/es') {
+      if (lang.code === 'es') {
+        window.location.href = '/terms/es';
+      } else {
+        window.location.href = '/terms';
+      }
+    }
+    
+    // Check if we're on privacy page
+    if (currentPath === '/privacy' || currentPath === '/privacy/es') {
+      if (lang.code === 'es') {
+        window.location.href = '/privacy/es';
+      } else {
+        window.location.href = '/privacy';
+      }
+    }
   }
 
   // Avoid hydration issues by not rendering on server
