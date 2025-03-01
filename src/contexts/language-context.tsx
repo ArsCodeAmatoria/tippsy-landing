@@ -1,6 +1,7 @@
 "use client"
 
-import React, { createContext, useContext, useEffect, useState } from "react"
+import React, { createContext, useContext, useEffect, useState, ReactNode } from "react"
+import { useRouter, usePathname } from 'next/navigation'
 
 export type LanguageCode = "en" | "es"
 
@@ -8,6 +9,8 @@ export interface LanguageContextType {
   language: LanguageCode
   setLanguage: (lang: LanguageCode) => void
   t: (key: string) => string
+  toggleLanguage: () => void
+  isSpanish: () => boolean
 }
 
 // Define the translation keys and values with proper typing
@@ -21,7 +24,7 @@ type TranslationKeys =
   | "features.bars.title" | "features.bars.description"
   | "features.deals.title" | "features.deals.description"
   | "features.safety.title" | "features.safety.description"
-  | "footer.privacy" | "footer.terms" | "footer.contact" | "footer.about" | "footer.partner" | "footer.copyright"
+  | "footer.privacy" | "footer.terms" | "footer.contact" | "footer.about" | "footer.partner" | "footer.copyright" | "footer.followUs" | "footer.githubAria" | "footer.twitterAria" | "footer.instagramAria" | "footer.linkedinAria"
   | "legal.privacyPolicy" | "legal.termsOfService" | "legal.lastUpdated" | "legal.back" | "legal.legalLabel" | "legal.contactUs" | "legal.contactUsText"
 
 type TranslationRecord = Record<TranslationKeys, string>
@@ -74,6 +77,11 @@ const translations: Translations = {
     "footer.about": "About Us",
     "footer.partner": "Partner With Us",
     "footer.copyright": "© 2025 Tippsy. All rights reserved.",
+    "footer.followUs": "Follow Us",
+    "footer.githubAria": "Tippsy GitHub",
+    "footer.twitterAria": "Tippsy Twitter",
+    "footer.instagramAria": "Tippsy Instagram",
+    "footer.linkedinAria": "Tippsy LinkedIn",
     
     // Legal pages
     "legal.privacyPolicy": "Privacy Policy",
@@ -130,6 +138,11 @@ const translations: Translations = {
     "footer.about": "Sobre Nosotros",
     "footer.partner": "Asóciese Con Nosotros",
     "footer.copyright": "© 2025 Tippsy. Todos los derechos reservados.",
+    "footer.followUs": "Síguenos",
+    "footer.githubAria": "GitHub de Tippsy",
+    "footer.twitterAria": "Twitter de Tippsy",
+    "footer.instagramAria": "Instagram de Tippsy",
+    "footer.linkedinAria": "LinkedIn de Tippsy",
     
     // Legal pages
     "legal.privacyPolicy": "Política de Privacidad",
@@ -142,43 +155,85 @@ const translations: Translations = {
   }
 }
 
-export const LanguageContext = createContext<LanguageContextType>({
-  language: "en",
-  setLanguage: () => {},
-  t: (key: string) => key
-})
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
-export const useLanguage = () => useContext(LanguageContext)
-
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<LanguageCode>("en")
-  const [mounted, setMounted] = useState(false)
+export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const pathname = usePathname()
+  const router = useRouter()
   
-  useEffect(() => {
-    setMounted(true)
-    const storedLang = localStorage.getItem("language") as LanguageCode
-    if (storedLang && (storedLang === "en" || storedLang === "es")) {
-      setLanguageState(storedLang)
+  // Detect browser language
+  const detectBrowserLanguage = (): LanguageCode => {
+    if (typeof window !== 'undefined') {
+      const browserLang = window.navigator.language.substring(0, 2).toLowerCase()
+      return browserLang === 'es' ? 'es' : 'en'
     }
-  }, [])
-  
-  const setLanguage = (lang: LanguageCode) => {
-    setLanguageState(lang)
-    localStorage.setItem("language", lang)
+    return 'en' // Default to English for server-side rendering
   }
   
+  // Set initial language based on URL
+  const initialLanguage = pathname?.startsWith('/es') ? 'es' : 'en' as LanguageCode
+  const [language, setLanguage] = useState<LanguageCode>(initialLanguage)
+  const [isInitialLoad, setIsInitialLoad] = useState(true)
+  
+  // Handle browser language detection on first load
+  useEffect(() => {
+    if (isInitialLoad && (pathname === '/' || pathname === undefined)) {
+      const browserLanguage = detectBrowserLanguage()
+      if (browserLanguage === 'es') {
+        router.push('/es')
+      }
+      setIsInitialLoad(false)
+    }
+  }, [isInitialLoad, pathname, router])
+  
+  // Update language when pathname changes
+  useEffect(() => {
+    const newLang = pathname?.startsWith('/es') ? 'es' : 'en' as LanguageCode
+    setLanguage(newLang)
+  }, [pathname])
+  
+  // Toggle language function
+  const toggleLanguage = () => {
+    const newLanguage = language === 'en' ? 'es' : 'en' as LanguageCode
+    setLanguage(newLanguage)
+    
+    // Redirect to the equivalent page in the other language
+    if (pathname) {
+      if (language === 'en' && !pathname.startsWith('/es')) {
+        // Switching to Spanish, add /es prefix
+        router.push(`/es${pathname === '/' ? '' : pathname}`)
+      } else if (language === 'es' && pathname.startsWith('/es')) {
+        // Switching to English, remove /es prefix
+        router.push(pathname === '/es' ? '/' : pathname.substring(3))
+      }
+    }
+  }
+  
+  // Helper function to check if the current language is Spanish
+  const isSpanish = () => language === 'es'
+  
+  // Translation function
   const t = (key: string): string => {
     return translations[language][key as TranslationKeys] || key
   }
   
-  // Only render children when we're in the browser
-  if (!mounted) {
-    return null
-  }
-  
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ 
+      language, 
+      setLanguage, 
+      t, 
+      toggleLanguage, 
+      isSpanish 
+    }}>
       {children}
     </LanguageContext.Provider>
   )
+}
+
+export const useLanguage = () => {
+  const context = useContext(LanguageContext)
+  if (context === undefined) {
+    throw new Error('useLanguage must be used within a LanguageProvider')
+  }
+  return context
 } 
