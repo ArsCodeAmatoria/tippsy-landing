@@ -119,6 +119,10 @@ const Header: React.FC = () => {
     if (href !== '/' && href !== '/es') {
       // If the current language is Spanish and the href doesn't already have /es
       if (isSpanish() && !href.startsWith('/es')) {
+        // Make sure we don't double-add /es for paths that already have an /es/ subfolder
+        if (href.includes('/es/')) {
+          return href;
+        }
         return `/es${href}`;
       }
       
@@ -158,13 +162,13 @@ const Header: React.FC = () => {
               {t("nav.features")}
             </Link>
             <Link 
-              href={getCorrectPath("/about")}
+              href={isSpanish() ? "/es/about" : "/about"}
               className={`font-medium text-lg transition-colors ${isLinkActive("/about") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200 hover:text-[#ff007F]'}`}
             >
               {t("nav.about")}
             </Link>
             <Link 
-              href={getCorrectPath("/partner")}
+              href={isSpanish() ? "/es/partner" : "/partner"}
               className={`font-medium text-lg transition-colors ${isLinkActive("/partner") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200 hover:text-[#ff007F]'}`}
             >
               {t("nav.partner")}
@@ -233,14 +237,14 @@ const Header: React.FC = () => {
               {t("nav.features")}
             </Link>
             <Link 
-              href={getCorrectPath("/about")}
+              href={isSpanish() ? "/es/about" : "/about"}
               className={`font-medium text-xl transition-colors ${isLinkActive("/about") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200'}`}
               onClick={toggleMobileMenu}
             >
               {t("nav.about")}
             </Link>
             <Link 
-              href={getCorrectPath("/partner")}
+              href={isSpanish() ? "/es/partner" : "/partner"}
               className={`font-medium text-xl transition-colors ${isLinkActive("/partner") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200'}`}
               onClick={toggleMobileMenu}
             >
