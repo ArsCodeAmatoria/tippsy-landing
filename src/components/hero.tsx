@@ -19,7 +19,8 @@ export function Hero() {
             className="max-w-3xl space-y-6 md:max-w-lg md:pl-4 md:pr-8 md:w-1/2"
           >
             <h1 className="text-center text-4xl font-bold leading-tight tracking-tighter md:text-left md:text-5xl lg:text-6xl">
-              Meet new people & find great bars with <span className="logo-font text-6xl md:text-7xl">Tippsy</span>
+              Meet new people & find great bars with <br className="hidden md:inline" />
+              <span className="logo-font text-6xl md:text-7xl tracking-wide">Tippsy</span>
             </h1>
             <p className="mx-auto text-center text-lg text-muted-foreground md:mx-0 md:text-left md:text-xl">
               The social matchmaking app that connects you with new friends and helps you discover the best bars in your area.
@@ -48,17 +49,29 @@ export function Hero() {
                 <Link href="#features">Learn More</Link>
               </Button>
             </div>
+            <div className="rounded-lg border border-muted bg-background/50 p-3 text-center md:text-left">
+              <p className="text-sm font-medium">
+                <span className="text-primary">Coming Soon:</span> Android version in development.{" "}
+                <Link href="#contact" className="underline underline-offset-2 hover:text-primary">
+                  Join the waitlist!
+                </Link>
+              </p>
+            </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-16 flex justify-center md:mt-0 md:w-1/2 md:justify-end"
+            className="mt-16 flex justify-center md:mt-0 md:w-1/2 md:justify-center"
           >
             <div className="relative h-[550px] w-[275px] overflow-hidden rounded-[40px] border-8 border-foreground shadow-xl dark:border-background">
-              <div className="absolute inset-0 flex items-center justify-center bg-slate-50 text-center text-sm">
-                <p>iOS App Screenshot<br />(Replace with actual app screenshot)</p>
-              </div>
+              <Image 
+                src="/images/ios-app-mockup.png" 
+                alt="Tippsy iOS App" 
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </motion.div>
         </div>
