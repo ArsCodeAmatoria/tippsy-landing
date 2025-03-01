@@ -26,7 +26,7 @@ export function Footer() {
               {t("footer.contact")}
             </Link>
             <div className="h-4 w-px bg-border"></div>
-            <Link href="#" className="transition-colors hover:text-foreground">
+            <Link href="/about" className="transition-colors hover:text-foreground">
               {t("footer.about")}
             </Link>
           </div>
