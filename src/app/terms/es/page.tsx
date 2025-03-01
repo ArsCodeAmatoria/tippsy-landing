@@ -57,64 +57,78 @@ export default function TermsOfServiceES() {
             </div>
             
             <h2 id="requisitos-de-edad" className="text-primary-foreground">Requisitos de Edad</h2>
-            <p>
-              Tippsy está destinado a usuarios que tienen la edad legal para consumir alcohol en sus 
-              respectivas ubicaciones. Esto es típicamente 21 años de edad en los Estados Unidos y 
-              18 o 19 en muchos otros países.
-            </p>
-            
-            <p>
-              Al usar Tippsy, representas y garantizas que tienes la edad legal para consumir alcohol en tu 
-              jurisdicción. Nos reservamos el derecho de terminar tu cuenta si descubrimos que estás por 
-              debajo de la edad legal para consumir alcohol.
-            </p>
+            <div className="space-y-4">
+              <p>
+                Tippsy está destinado a usuarios que tienen la edad legal para consumir alcohol en sus 
+                respectivas ubicaciones. Esto es típicamente 21 años de edad en los Estados Unidos y 
+                18 o 19 en muchos otros países.
+              </p>
+              
+              <div className="rounded-lg border bg-amber-50 dark:bg-amber-950/30 p-4 shadow-sm border-amber-200 dark:border-amber-900/50">
+                <p className="font-medium mb-0">
+                  <strong>Al usar Tippsy, representas y garantizas que tienes la edad legal para consumir alcohol en tu 
+                  jurisdicción. Nos reservamos el derecho de terminar tu cuenta si descubrimos que estás por 
+                  debajo de la edad legal para consumir alcohol.</strong>
+                </p>
+              </div>
+            </div>
             
             <h2 id="cuentas" className="text-primary-foreground">Cuentas</h2>
-            <p>
-              Cuando creas una cuenta con nosotros, debes proporcionar información que sea precisa, completa 
-              y actual en todo momento. El incumplimiento de esto constituye una violación de los Términos, 
-              lo que puede resultar en la terminación inmediata de tu cuenta en nuestro Servicio.
-            </p>
-            
-            <p>
-              Eres responsable de salvaguardar la contraseña que utilizas para acceder al Servicio y por 
-              cualquier actividad o acción bajo tu contraseña. Aceptas no revelar tu contraseña a ningún 
-              tercero. Debes notificarnos inmediatamente al tener conocimiento de cualquier violación de 
-              seguridad o uso no autorizado de tu cuenta.
-            </p>
+            <div className="space-y-4">
+              <p>
+                Cuando creas una cuenta con nosotros, debes proporcionar información que sea precisa, completa 
+                y actual en todo momento. El incumplimiento de esto constituye una violación de los Términos, 
+                lo que puede resultar en la terminación inmediata de tu cuenta en nuestro Servicio.
+              </p>
+              
+              <div className="rounded-lg border p-4 bg-muted/40 dark:bg-gray-800/50 dark:border-gray-700">
+                <p className="mb-0">
+                  <strong>Eres responsable de salvaguardar la contraseña</strong> que utilizas para acceder al Servicio y por 
+                  cualquier actividad o acción bajo tu contraseña. Aceptas no revelar tu contraseña a ningún 
+                  tercero. Debes notificarnos inmediatamente al tener conocimiento de cualquier violación de 
+                  seguridad o uso no autorizado de tu cuenta.
+                </p>
+              </div>
+            </div>
             
             <h2 id="contenido-del-usuario" className="text-primary-foreground">Contenido del Usuario</h2>
-            <p>
-              Nuestro Servicio te permite publicar, enlazar, almacenar, compartir y de otra manera poner a 
-              disposición cierta información, texto, gráficos, videos u otro material ("Contenido"). Eres 
-              responsable del Contenido que publiques en o a través del Servicio, incluyendo su legalidad, 
-              confiabilidad y apropiación.
-            </p>
-            
-            <p>
-              Al publicar Contenido en o a través del Servicio, representas y garantizas que:
-            </p>
-            <ul className="space-y-2 dark:text-gray-300">
-              <li>
-                <strong>Eres propietario del Contenido</strong> - El Contenido es tuyo (eres su propietario) o tienes derecho a usarlo y concedernos los derechos y licencias proporcionados en estos Términos.
-              </li>
-              <li>
-                <strong>No hay violación de derechos</strong> - La publicación de tu Contenido no viola los derechos de privacidad, derechos de publicidad, derechos de autor, derechos contractuales ni ningún otro derecho de cualquier persona.
-              </li>
-            </ul>
+            <div className="space-y-4">
+              <p>
+                Nuestro Servicio te permite publicar, enlazar, almacenar, compartir y de otra manera poner a 
+                disposición cierta información, texto, gráficos, videos u otro material ("Contenido"). Eres 
+                responsable del Contenido que publiques en o a través del Servicio, incluyendo su legalidad, 
+                confiabilidad y apropiación.
+              </p>
+              
+              <p>
+                Al publicar Contenido en o a través del Servicio, representas y garantizas que:
+              </p>
+              <ul className="space-y-2 dark:text-gray-300">
+                <li className="p-2 rounded-md bg-gray-50 dark:bg-gray-800/70">
+                  <strong>Eres propietario del Contenido</strong> - El Contenido es tuyo (eres su propietario) o tienes derecho a usarlo y concedernos los derechos y licencias proporcionados en estos Términos.
+                </li>
+                <li className="p-2 rounded-md bg-gray-50 dark:bg-gray-800/70">
+                  <strong>No hay violación de derechos</strong> - La publicación de tu Contenido no viola los derechos de privacidad, derechos de publicidad, derechos de autor, derechos contractuales ni ningún otro derecho de cualquier persona.
+                </li>
+              </ul>
+            </div>
             
             <h2 id="conducta-prohibida" className="text-primary-foreground">Conducta Prohibida</h2>
-            <p>Aceptas no participar en ninguna de las siguientes actividades prohibidas:</p>
-            <ul className="space-y-2">
-              <li><strong>Actividades ilegales</strong> - Usar el Servicio para cualquier propósito ilegal o en violación de cualquier ley local, estatal, nacional o internacional</li>
-              <li><strong>Acoso</strong> - Acosar, amenazar o intimidar a cualquier otro usuario</li>
-              <li><strong>Suplantación</strong> - Suplantar a otra persona o entidad</li>
-              <li><strong>Contenido ofensivo</strong> - Publicar contenido que sea ofensivo, difamatorio, obsceno o de otra manera objetable</li>
-              <li><strong>Uso bajo intoxicación</strong> - Usar el Servicio mientras esté intoxicado o bajo la influencia de sustancias</li>
-              <li><strong>Prácticas inseguras</strong> - Fomentar prácticas de consumo de alcohol inseguras</li>
-              <li><strong>Elusión de seguridad</strong> - Intentar eludir cualquier característica de seguridad del Servicio</li>
-              <li><strong>Múltiples cuentas</strong> - Crear múltiples cuentas con el propósito de abusar de promociones o evadir prohibiciones</li>
-            </ul>
+            <div className="space-y-4">
+              <p>Aceptas no participar en ninguna de las siguientes actividades prohibidas:</p>
+              <div className="rounded-lg border p-4 bg-muted/30 dark:bg-gray-800/30 dark:border-gray-700">
+                <ul className="space-y-2 dark:text-gray-300 grid gap-2 md:grid-cols-2">
+                  <li><strong>Actividades ilegales</strong> - Usar el Servicio para cualquier propósito ilegal o en violación de cualquier ley local, estatal, nacional o internacional</li>
+                  <li><strong>Acoso</strong> - Acosar, amenazar o intimidar a cualquier otro usuario</li>
+                  <li><strong>Suplantación</strong> - Suplantar a otra persona o entidad</li>
+                  <li><strong>Contenido ofensivo</strong> - Publicar contenido que sea ofensivo, difamatorio, obsceno o de otra manera objetable</li>
+                  <li><strong>Uso bajo intoxicación</strong> - Usar el Servicio mientras esté intoxicado o bajo la influencia de sustancias</li>
+                  <li><strong>Prácticas inseguras</strong> - Fomentar prácticas de consumo de alcohol inseguras</li>
+                  <li><strong>Elusión de seguridad</strong> - Intentar eludir cualquier característica de seguridad del Servicio</li>
+                  <li><strong>Múltiples cuentas</strong> - Crear múltiples cuentas con el propósito de abusar de promociones o evadir prohibiciones</li>
+                </ul>
+              </div>
+            </div>
             
             <h2 id="propiedad-intelectual" className="text-primary-foreground">Propiedad Intelectual</h2>
             <p>

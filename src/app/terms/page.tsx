@@ -56,63 +56,77 @@ export default function TermsOfService() {
             </div>
             
             <h2 id="age-requirements" className="text-primary-foreground">Age Requirements</h2>
-            <p>
-              Tippsy is intended for users who are of legal drinking age in their respective locations. 
-              This is typically 21 years of age in the United States and 18 or 19 in many other countries.
-            </p>
-            
-            <p>
-              By using Tippsy, you represent and warrant that you are of legal drinking age in your 
-              jurisdiction. We reserve the right to terminate your account if we discover that you are 
-              under the legal drinking age.
-            </p>
+            <div className="space-y-4">
+              <p>
+                Tippsy is intended for users who are of legal drinking age in their respective locations. 
+                This is typically 21 years of age in the United States and 18 or 19 in many other countries.
+              </p>
+              
+              <div className="rounded-lg border bg-amber-50 dark:bg-amber-950/30 p-4 shadow-sm border-amber-200 dark:border-amber-900/50">
+                <p className="font-medium mb-0">
+                  <strong>By using Tippsy, you represent and warrant that you are of legal drinking age in your 
+                  jurisdiction. We reserve the right to terminate your account if we discover that you are 
+                  under the legal drinking age.</strong>
+                </p>
+              </div>
+            </div>
             
             <h2 id="accounts" className="text-primary-foreground">Accounts</h2>
-            <p>
-              When you create an account with us, you must provide information that is accurate, complete, 
-              and current at all times. Failure to do so constitutes a breach of the Terms, which may 
-              result in immediate termination of your account on our Service.
-            </p>
-            
-            <p>
-              You are responsible for safeguarding the password that you use to access the Service and for 
-              any activities or actions under your password. You agree not to disclose your password to any 
-              third party. You must notify us immediately upon becoming aware of any breach of security or 
-              unauthorized use of your account.
-            </p>
+            <div className="space-y-4">
+              <p>
+                When you create an account with us, you must provide information that is accurate, complete, 
+                and current at all times. Failure to do so constitutes a breach of the Terms, which may 
+                result in immediate termination of your account on our Service.
+              </p>
+              
+              <div className="rounded-lg border p-4 bg-muted/40 dark:bg-gray-800/50 dark:border-gray-700">
+                <p className="mb-0">
+                  <strong>You are responsible for safeguarding the password</strong> that you use to access the Service and for 
+                  any activities or actions under your password. You agree not to disclose your password to any 
+                  third party. You must notify us immediately upon becoming aware of any breach of security or 
+                  unauthorized use of your account.
+                </p>
+              </div>
+            </div>
             
             <h2 id="user-content" className="text-primary-foreground">User Content</h2>
-            <p>
-              Our Service allows you to post, link, store, share and otherwise make available certain 
-              information, text, graphics, videos, or other material ("Content"). You are responsible for 
-              the Content that you post on or through the Service, including its legality, reliability, 
-              and appropriateness.
-            </p>
-            
-            <p>
-              By posting Content on or through the Service, you represent and warrant that:
-            </p>
-            <ul className="space-y-2 dark:text-gray-300">
-              <li>
-                <strong>You own the Content</strong> - The Content is yours (you own it) or you have the right to use it and grant us the rights and license as provided in these Terms.
-              </li>
-              <li>
-                <strong>No rights violations</strong> - The posting of your Content does not violate the privacy rights, publicity rights, copyrights, contract rights or any other rights of any person.
-              </li>
-            </ul>
+            <div className="space-y-4">
+              <p>
+                Our Service allows you to post, link, store, share and otherwise make available certain 
+                information, text, graphics, videos, or other material ("Content"). You are responsible for 
+                the Content that you post on or through the Service, including its legality, reliability, 
+                and appropriateness.
+              </p>
+              
+              <p>
+                By posting Content on or through the Service, you represent and warrant that:
+              </p>
+              <ul className="space-y-2 dark:text-gray-300">
+                <li className="p-2 rounded-md bg-gray-50 dark:bg-gray-800/70">
+                  <strong>You own the Content</strong> - The Content is yours (you own it) or you have the right to use it and grant us the rights and license as provided in these Terms.
+                </li>
+                <li className="p-2 rounded-md bg-gray-50 dark:bg-gray-800/70">
+                  <strong>No rights violations</strong> - The posting of your Content does not violate the privacy rights, publicity rights, copyrights, contract rights or any other rights of any person.
+                </li>
+              </ul>
+            </div>
             
             <h2 id="prohibited-conduct" className="text-primary-foreground">Prohibited Conduct</h2>
-            <p>You agree not to engage in any of the following prohibited activities:</p>
-            <ul className="space-y-2 dark:text-gray-300">
-              <li><strong>Illegal activities</strong> - Using the Service for any illegal purpose or in violation of any local, state, national, or international law</li>
-              <li><strong>Harassment</strong> - Harassing, threatening, or intimidating any other users</li>
-              <li><strong>Impersonation</strong> - Impersonating another person or entity</li>
-              <li><strong>Offensive content</strong> - Posting content that is offensive, defamatory, obscene, or otherwise objectionable</li>
-              <li><strong>Intoxicated use</strong> - Using the Service while intoxicated or under the influence of substances</li>
-              <li><strong>Unsafe practices</strong> - Encouraging unsafe drinking practices</li>
-              <li><strong>Security circumvention</strong> - Attempting to circumvent any security features of the Service</li>
-              <li><strong>Multiple accounts</strong> - Creating multiple accounts for the purpose of abusing promotions or evading bans</li>
-            </ul>
+            <div className="space-y-4">
+              <p>You agree not to engage in any of the following prohibited activities:</p>
+              <div className="rounded-lg border p-4 bg-muted/30 dark:bg-gray-800/30 dark:border-gray-700">
+                <ul className="space-y-2 dark:text-gray-300 grid gap-2 md:grid-cols-2">
+                  <li><strong>Illegal activities</strong> - Using the Service for any illegal purpose or in violation of any local, state, national, or international law</li>
+                  <li><strong>Harassment</strong> - Harassing, threatening, or intimidating any other users</li>
+                  <li><strong>Impersonation</strong> - Impersonating another person or entity</li>
+                  <li><strong>Offensive content</strong> - Posting content that is offensive, defamatory, obscene, or otherwise objectionable</li>
+                  <li><strong>Intoxicated use</strong> - Using the Service while intoxicated or under the influence of substances</li>
+                  <li><strong>Unsafe practices</strong> - Encouraging unsafe drinking practices</li>
+                  <li><strong>Security circumvention</strong> - Attempting to circumvent any security features of the Service</li>
+                  <li><strong>Multiple accounts</strong> - Creating multiple accounts for the purpose of abusing promotions or evading bans</li>
+                </ul>
+              </div>
+            </div>
             
             <h2 id="intellectual-property" className="text-primary-foreground">Intellectual Property</h2>
             <p>
