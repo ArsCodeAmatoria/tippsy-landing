@@ -110,11 +110,6 @@ export default function PartnerPageES() {
                     <li>Desarrollo de gráficos sociales descentralizados</li>
                     <li>Integraciones de pago con criptomonedas para gestión de cuentas en locales</li>
                   </ul>
-                  <div className="flex justify-center mt-6">
-                    <div className="flex justify-center items-center">
-                      <Image src="/images/tech-logos/polkadot-logo.svg" width={80} height={80} alt="Polkadot" />
-                    </div>
-                  </div>
                 </div>
               </div>
 
