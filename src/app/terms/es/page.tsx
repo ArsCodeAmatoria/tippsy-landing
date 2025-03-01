@@ -131,70 +131,99 @@ export default function TermsOfServiceES() {
             </div>
             
             <h2 id="propiedad-intelectual" className="text-primary-foreground">Propiedad Intelectual</h2>
-            <p>
-              El Servicio y su contenido original (excluyendo el Contenido proporcionado por usuarios), 
-              características y funcionalidad son y seguirán siendo propiedad exclusiva de Tippsy y sus 
-              licenciantes.
-            </p>
-            
-            <p>
-              El Servicio está protegido por derechos de autor, marcas registradas y otras leyes tanto de 
-              los Estados Unidos como de países extranjeros. Nuestras marcas registradas y vestimenta 
-              comercial no pueden ser utilizadas en conexión con ningún producto o servicio sin el 
-              consentimiento previo por escrito de Tippsy.
-            </p>
+            <div className="space-y-4">
+              <p>
+                El Servicio y su contenido original (excluyendo el Contenido proporcionado por usuarios), 
+                características y funcionalidad son y seguirán siendo propiedad exclusiva de Tippsy y sus 
+                licenciantes.
+              </p>
+              
+              <div className="rounded-lg border p-4 bg-muted/40 dark:bg-gray-800/50 dark:border-gray-700">
+                <p className="mb-0">
+                  El Servicio está protegido por derechos de autor, marcas registradas y otras leyes tanto de 
+                  los Estados Unidos como de países extranjeros. <strong>Nuestras marcas registradas y vestimenta 
+                  comercial no pueden ser utilizadas</strong> en conexión con ningún producto o servicio sin el 
+                  consentimiento previo por escrito de Tippsy.
+                </p>
+              </div>
+            </div>
             
             <h2 id="enlaces-a-otros-sitios-web" className="text-primary-foreground">Enlaces a Otros Sitios Web</h2>
-            <p>
-              Nuestro Servicio puede contener enlaces a sitios web o servicios de terceros que no son 
-              propiedad ni están controlados por Tippsy.
-            </p>
-            
-            <p>
-              Tippsy no tiene control sobre, y no asume responsabilidad por, el contenido, políticas de 
-              privacidad o prácticas de cualquier sitio web o servicio de terceros. Además, reconoces y 
-              aceptas que Tippsy no será responsable, directa o indirectamente, por cualquier daño o pérdida 
-              causado o supuestamente causado por o en conexión con el uso o la confianza en cualquier 
-              contenido, bienes o servicios disponibles en o a través de cualquier sitio web o servicio.
-            </p>
+            <div className="space-y-4">
+              <p>
+                Nuestro Servicio puede contener enlaces a sitios web o servicios de terceros que no son 
+                propiedad ni están controlados por Tippsy.
+              </p>
+              
+              <div className="rounded-lg border p-4 bg-amber-50/50 dark:bg-amber-950/20 dark:border-amber-900/30">
+                <p className="mb-0">
+                  <strong>Tippsy no tiene control sobre, y no asume responsabilidad por</strong>, el contenido, políticas de 
+                  privacidad o prácticas de cualquier sitio web o servicio de terceros. Además, reconoces y 
+                  aceptas que Tippsy no será responsable, directa o indirectamente, por cualquier daño o pérdida 
+                  causado o supuestamente causado por o en conexión con el uso o la confianza en cualquier 
+                  contenido, bienes o servicios disponibles en o a través de cualquier sitio web o servicio.
+                </p>
+              </div>
+            </div>
             
             <h2 id="terminacion" className="text-primary-foreground">Terminación</h2>
-            <p>
-              Podemos terminar o suspender tu cuenta inmediatamente, sin previo aviso o responsabilidad, 
-              por cualquier razón, incluyendo, sin limitación, si incumples los Términos.
-            </p>
-            
-            <p>
-              Tras la terminación, tu derecho a usar el Servicio cesará inmediatamente. Si deseas terminar 
-              tu cuenta, puedes simplemente dejar de usar el Servicio.
-            </p>
+            <div className="space-y-4">
+              <div className="rounded-lg border p-4 bg-muted/40 dark:bg-gray-800/50 dark:border-gray-700">
+                <p className="mb-0">
+                  <strong>Podemos terminar o suspender tu cuenta inmediatamente</strong>, sin previo aviso o responsabilidad, 
+                  por cualquier razón, incluyendo, sin limitación, si incumples los Términos.
+                </p>
+              </div>
+              
+              <p>
+                Tras la terminación, tu derecho a usar el Servicio cesará inmediatamente. Si deseas terminar 
+                tu cuenta, puedes simplemente dejar de usar el Servicio.
+              </p>
+            </div>
             
             <h2 id="limitacion-de-responsabilidad" className="text-primary-foreground">Limitación de Responsabilidad</h2>
-            <p>
-              En la máxima medida permitida por la ley aplicable, en ningún caso Tippsy, sus afiliados, 
-              agentes, directores, empleados, proveedores o licenciantes serán responsables por cualquier 
-              daño indirecto, punitivo, incidental, especial, consecuente o ejemplar, incluyendo sin 
-              limitación, daños por pérdida de beneficios, buena voluntad, uso, datos u otras pérdidas 
-              intangibles, que surjan de o estén relacionadas con tu uso, o incapacidad para usar, el Servicio.
-            </p>
+            <div className="space-y-4">
+              <div className="rounded-lg border p-4 bg-amber-50/50 dark:bg-amber-950/20 dark:border-amber-900/30">
+                <p className="font-medium mb-0">
+                  <strong>En la máxima medida permitida por la ley aplicable</strong>, en ningún caso Tippsy, sus afiliados, 
+                  agentes, directores, empleados, proveedores o licenciantes serán responsables por cualquier 
+                  daño indirecto, punitivo, incidental, especial, consecuente o ejemplar, incluyendo sin 
+                  limitación, daños por pérdida de beneficios, buena voluntad, uso, datos u otras pérdidas 
+                  intangibles, que surjan de o estén relacionadas con tu uso, o incapacidad para usar, el Servicio.
+                </p>
+              </div>
+            </div>
             
             <h2 id="exenciones-de-responsabilidad" className="text-primary-foreground">Exenciones de Responsabilidad</h2>
-            <p>
-              Tu uso del Servicio es a tu propio riesgo. El Servicio se proporciona "TAL CUAL" y "SEGÚN 
-              DISPONIBILIDAD". El Servicio se proporciona sin garantías de ningún tipo, ya sean expresas o 
-              implícitas, incluyendo, pero no limitado a, garantías implícitas de comerciabilidad, idoneidad 
-              para un propósito particular, no infracción o curso de rendimiento.
-            </p>
-            
-            <p>
-              Tippsy, sus subsidiarias, afiliados y sus licenciantes no garantizan que:
-            </p>
-            <ul className="space-y-2 dark:text-gray-300">
-              <li><strong>Servicio continuo</strong> - El Servicio funcionará ininterrumpido, seguro o disponible en cualquier momento o ubicación particular</li>
-              <li><strong>Corrección de errores</strong> - Cualquier error o defecto será corregido</li>
-              <li><strong>Garantías de seguridad</strong> - El Servicio está libre de virus u otros componentes dañinos</li>
-              <li><strong>Satisfacción</strong> - Los resultados de usar el Servicio cumplirán con tus requisitos</li>
-            </ul>
+            <div className="space-y-4">
+              <div className="rounded-lg border p-4 bg-muted/40 dark:bg-gray-800/50 dark:border-gray-700">
+                <p className="mb-0">
+                  <strong>Tu uso del Servicio es a tu propio riesgo.</strong> El Servicio se proporciona "TAL CUAL" y "SEGÚN 
+                  DISPONIBILIDAD". El Servicio se proporciona sin garantías de ningún tipo, ya sean expresas o 
+                  implícitas, incluyendo, pero no limitado a, garantías implícitas de comerciabilidad, idoneidad 
+                  para un propósito particular, no infracción o curso de rendimiento.
+                </p>
+              </div>
+              
+              <p>
+                Tippsy, sus subsidiarias, afiliados y sus licenciantes no garantizan que:
+              </p>
+              
+              <ul className="space-y-2 dark:text-gray-300 grid gap-2 sm:grid-cols-2">
+                <li className="p-2 rounded-md bg-gray-50 dark:bg-gray-800/70">
+                  <strong>Servicio continuo</strong> - El Servicio funcionará ininterrumpido, seguro o disponible en cualquier momento o ubicación particular
+                </li>
+                <li className="p-2 rounded-md bg-gray-50 dark:bg-gray-800/70">
+                  <strong>Corrección de errores</strong> - Cualquier error o defecto será corregido
+                </li>
+                <li className="p-2 rounded-md bg-gray-50 dark:bg-gray-800/70">
+                  <strong>Garantías de seguridad</strong> - El Servicio está libre de virus u otros componentes dañinos
+                </li>
+                <li className="p-2 rounded-md bg-gray-50 dark:bg-gray-800/70">
+                  <strong>Satisfacción</strong> - Los resultados de usar el Servicio cumplirán con tus requisitos
+                </li>
+              </ul>
+            </div>
             
             <h2 id="ley-aplicable" className="text-primary-foreground">Ley Aplicable</h2>
             <div className="space-y-4">
