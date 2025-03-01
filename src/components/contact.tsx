@@ -11,6 +11,7 @@ import { useLanguage } from "@/contexts/language-context"
 
 export function Contact() {
   const [email, setEmail] = React.useState("")
+  const [ageVerified, setAgeVerified] = React.useState(false)
   const [submitted, setSubmitted] = React.useState(false)
   const [loading, setLoading] = React.useState(false)
   const [error, setError] = React.useState<string | null>(null)
@@ -18,6 +19,11 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    if (!ageVerified) {
+      setError("You must confirm you are of legal drinking age to continue.")
+      return
+    }
+    
     setLoading(true)
     setError(null)
     
@@ -95,6 +101,22 @@ export function Contact() {
                       placeholder={t("contact.emailPlaceholder")}
                       className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                     />
+                  </div>
+                  
+                  <div className="flex items-start space-x-2 pt-2">
+                    <div className="flex h-5 items-center">
+                      <input
+                        id="age-verification"
+                        name="age-verification"
+                        type="checkbox"
+                        checked={ageVerified}
+                        onChange={(e) => setAgeVerified(e.target.checked)}
+                        className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
+                      />
+                    </div>
+                    <label htmlFor="age-verification" className="text-xs text-left">
+                      {t("contact.ageVerification")}
+                    </label>
                   </div>
                   
                   {error && (

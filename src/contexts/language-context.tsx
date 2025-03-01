@@ -15,7 +15,7 @@ type TranslationKeys =
   | "hero.title" | "hero.subtitle" | "hero.comingSoon" | "hero.finishing" | "hero.joinWaitlist" | "hero.waitlistBtn" | "hero.learnMoreBtn"
   | "nav.features" | "nav.testimonials" | "nav.pricing" | "nav.contact"
   | "cta.title" | "cta.subtitle" | "cta.joinWaitlist" | "cta.learnMore"
-  | "contact.title" | "contact.subtitle" | "contact.waitlistTitle" | "contact.waitlistInfo" | "contact.thanks" | "contact.emailLabel" | "contact.emailPlaceholder" | "contact.submitBtn"
+  | "contact.title" | "contact.subtitle" | "contact.waitlistTitle" | "contact.waitlistInfo" | "contact.thanks" | "contact.emailLabel" | "contact.emailPlaceholder" | "contact.submitBtn" | "contact.ageVerification"
   | "features.title" | "features.subtitle"
   | "features.social.title" | "features.social.description" 
   | "features.bars.title" | "features.bars.description"
@@ -54,6 +54,7 @@ const translations: Translations = {
     "contact.emailLabel": "Email Address",
     "contact.emailPlaceholder": "your.email@example.com",
     "contact.submitBtn": "Join Waitlist",
+    "contact.ageVerification": "I confirm that I am of legal drinking age in my country of residence and agree to the Terms of Service.",
     
     "features.title": "Everything you need to enhance your social life",
     "features.subtitle": "Tippsy combines social networking with bar discovery to create the ultimate nightlife companion.",
@@ -99,6 +100,7 @@ const translations: Translations = {
     "contact.emailLabel": "Correo Electrónico",
     "contact.emailPlaceholder": "tu.correo@ejemplo.com",
     "contact.submitBtn": "Unirse a la Lista",
+    "contact.ageVerification": "Confirmo que tengo la edad legal para beber en mi país de residencia y acepto los Términos de Servicio.",
     
     "features.title": "Todo lo que necesitas para mejorar tu vida social",
     "features.subtitle": "Tippsy combina las redes sociales con el descubrimiento de bares para crear el compañero perfecto para tu vida nocturna.",
