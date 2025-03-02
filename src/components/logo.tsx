@@ -4,12 +4,9 @@ export function Logo() {
   return (
     <div className="flex items-center">
       <span 
-        className="text-3xl md:text-5xl font-bold tracking-wide" 
+        className="text-3xl md:text-5xl tracking-wide logo-font" 
         style={{ 
-          fontFamily: "'Mrs Sheppards', cursive", 
-          color: "var(--primary)",
-          fontWeight: "normal",
-          letterSpacing: "0.02em"
+          fontWeight: "normal"
         }}
       >
         Tippsy

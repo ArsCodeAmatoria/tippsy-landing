@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 // Base URLs for resources
-const BASE_URL = "https://tippsy.io";
+const BASE_URL = "https://tippsyapp.com";
 const SOCIAL_IMAGE_BASE_URL = `${BASE_URL}/images`;
 
 // Default metadata values

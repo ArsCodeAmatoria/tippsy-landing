@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Mrs_Sheppards } from "next/font/google";
 import "./globals.css";
 
 import { Providers } from "./providers";
@@ -16,6 +17,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-geist-mono",
+});
+
+const mrsSheppards = Mrs_Sheppards({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-mrs-sheppards",
+  display: "swap",
 });
 
 // Base metadata values that apply across the site
@@ -95,7 +103,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${mrsSheppards.variable} antialiased`}
       >
         <LanguageProvider>
           <Providers>

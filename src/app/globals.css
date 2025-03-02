@@ -1,5 +1,6 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Mrs+Sheppards&display=swap');
+/* We'll use Next.js font loading instead */
+/* @import url('https://fonts.googleapis.com/css2?family=Mrs+Sheppards&display=swap'); */
 
 @plugin "tailwindcss-animate";
 
@@ -8,7 +9,7 @@
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-logo: 'Mrs Sheppards', cursive;
+  --font-logo: var(--font-mrs-sheppards);
 }
 
 :root {

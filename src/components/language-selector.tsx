@@ -47,6 +47,16 @@ export function LanguageSelector() {
     // Handle path-based language switching for specific pages
     const currentPath = window.location.pathname
     
+    // Handle home page
+    if (currentPath === '/' || currentPath === '/es') {
+      if (lang.code === 'es') {
+        window.location.href = '/es';
+      } else {
+        window.location.href = '/';
+      }
+      return;
+    }
+    
     // Check if we're on an about page
     if (currentPath === '/about' || currentPath === '/about/es') {
       // Redirect to the proper language version
@@ -55,6 +65,17 @@ export function LanguageSelector() {
       } else {
         window.location.href = '/about';
       }
+      return;
+    }
+    
+    // Check if we're on partner page
+    if (currentPath === '/partner' || currentPath === '/partner/es') {
+      if (lang.code === 'es') {
+        window.location.href = '/partner/es';
+      } else {
+        window.location.href = '/partner';
+      }
+      return;
     }
     
     // Check if we're on terms page
@@ -64,6 +85,7 @@ export function LanguageSelector() {
       } else {
         window.location.href = '/terms';
       }
+      return;
     }
     
     // Check if we're on privacy page
@@ -73,6 +95,7 @@ export function LanguageSelector() {
       } else {
         window.location.href = '/privacy';
       }
+      return;
     }
   }
 
