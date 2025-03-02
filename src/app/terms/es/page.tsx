@@ -283,7 +283,7 @@ export default function TermsOfServiceES() {
                 Si tienes alguna pregunta sobre estos Términos, contáctanos en:
               </p>
               <p className="mb-0">
-                <a href="mailto:legal@tippsy.app" className="text-primary hover:underline font-medium text-lg">legal@tippsy.app</a>
+                <a href="mailto:legal@tippsy.me" className="text-primary hover:underline font-medium text-lg">legal@tippsy.me</a>
               </p>
             </div>
           </div>

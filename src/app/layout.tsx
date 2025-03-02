@@ -29,7 +29,7 @@ const mrsSheppards = Mrs_Sheppards({
 // Base metadata values that apply across the site
 export const metadata: Metadata = {
   // This will be merged with page-specific metadata
-  metadataBase: new URL("https://tippsyapp.com"),
+  metadataBase: new URL("https://tippsy.me"),
   
   // Basic site-wide settings
   applicationName: "Tippsy",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
       app_store_id: "123456789",
     },
     android: {
-      package: "com.tippsy.app",
+      package: "com.tippsy.me",
       app_name: "Tippsy",
     },
     web: {

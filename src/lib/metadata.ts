@@ -1,15 +1,15 @@
 import { Metadata } from "next";
 
 // Base URLs for resources
-const BASE_URL = "https://tippsyapp.com";
-const SOCIAL_IMAGE_BASE_URL = `${BASE_URL}/images`;
+const BASE_URL = "https://tippsy.me";
+const SOCIAL_IMAGE_BASE_URL = `${BASE_URL}/social`;
 
 // Default metadata values
 const DEFAULT_TITLE = "Tippsy - Connect & Meet at Local Bars";
 const DEFAULT_DESCRIPTION = "Tippsy helps you meet new people in real life at local bars and venues. No endless texting, just genuine connections over drinks.";
 
 // Default social image
-const DEFAULT_SOCIAL_IMAGE = `${SOCIAL_IMAGE_BASE_URL}/tippsy-about.png`;
+const DEFAULT_SOCIAL_IMAGE = `${BASE_URL}/images/tippsy-about.png`;
 
 // Types of locales the app supports
 export type SupportedLocale = "en" | "es";
@@ -77,8 +77,8 @@ export function generateMetadata({
       title: formattedTitle,
       description,
       images: [twitterImage],
-      creator: "@TippsyApp",
-      site: "@TippsyApp",
+      creator: "@Tippsy",
+      site: "@Tippsy",
     },
   };
 }

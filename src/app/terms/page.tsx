@@ -275,7 +275,7 @@ export default function TermsOfService() {
                 If you have any questions about these Terms, please contact us at:
               </p>
               <p className="mb-0">
-                <a href="mailto:legal@tippsy.app" className="text-primary hover:underline font-medium text-lg">legal@tippsy.app</a>
+                <a href="mailto:legal@tippsy.me" className="text-primary hover:underline font-medium text-lg">legal@tippsy.me</a>
               </p>
             </div>
           </div>

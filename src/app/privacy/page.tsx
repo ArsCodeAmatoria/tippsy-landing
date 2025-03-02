@@ -202,7 +202,7 @@ export default function PrivacyPolicy() {
                 If you have any questions about this Privacy Policy, please contact us at:
               </p>
               <p className="mb-0">
-                <a href="mailto:privacy@tippsy.app" className="text-primary hover:underline font-medium text-lg">privacy@tippsy.app</a>
+                <a href="mailto:privacy@tippsy.me" className="text-primary hover:underline font-medium text-lg">privacy@tippsy.me</a>
               </p>
             </div>
           </div>

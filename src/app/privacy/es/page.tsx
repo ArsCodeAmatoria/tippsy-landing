@@ -216,7 +216,7 @@ export default function PrivacyPolicyES() {
                 Si tienes alguna pregunta sobre esta Política de Privacidad, contáctanos en:
               </p>
               <p className="mb-0">
-                <a href="mailto:privacy@tippsy.app" className="text-primary hover:underline font-medium text-lg">privacy@tippsy.app</a>
+                <a href="mailto:privacy@tippsy.me" className="text-primary hover:underline font-medium text-lg">privacy@tippsy.me</a>
               </p>
             </div>
           </div>
