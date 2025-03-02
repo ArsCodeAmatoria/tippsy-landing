@@ -170,31 +170,71 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
     return 'en' // Default to English for server-side rendering
   }
   
-  // Set initial language based on URL
-  const initialLanguage = pathname?.startsWith('/es') ? 'es' : 'en' as LanguageCode
-  const [language, setLanguage] = useState<LanguageCode>(initialLanguage)
+  // Get saved language preference from localStorage if available
+  const getSavedLanguage = (): LanguageCode | null => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('tippsy-language')
+      return (saved === 'en' || saved === 'es') ? saved : null
+    }
+    return null
+  }
+
+  // Set initial language based on URL, then localStorage, then browser
+  const getInitialLanguage = (): LanguageCode => {
+    // URL has highest priority
+    if (pathname?.startsWith('/es')) {
+      return 'es'
+    }
+    
+    // Then check localStorage
+    const savedLanguage = getSavedLanguage()
+    if (savedLanguage) {
+      return savedLanguage
+    }
+    
+    // Default to English
+    return 'en'
+  }
+  
+  const [language, setLanguage] = useState<LanguageCode>(getInitialLanguage())
   const [isInitialLoad, setIsInitialLoad] = useState(true)
+  
+  // Save language preference to localStorage when it changes
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('tippsy-language', language)
+    }
+  }, [language])
   
   // Handle browser language detection on first load
   useEffect(() => {
-    if (isInitialLoad && (pathname === '/' || pathname === undefined)) {
-      const browserLanguage = detectBrowserLanguage()
-      if (browserLanguage === 'es') {
+    if (isInitialLoad && pathname === '/') {
+      const savedLang = getSavedLanguage()
+      if (savedLang === 'es') {
         router.push('/es')
+      } else if (!savedLang) {
+        const browserLanguage = detectBrowserLanguage()
+        if (browserLanguage === 'es') {
+          router.push('/es')
+        }
       }
       setIsInitialLoad(false)
     }
   }, [isInitialLoad, pathname, router])
   
-  // Update language when pathname changes
+  // Update language when pathname changes, but only if it's a language-specific path change
   useEffect(() => {
-    const newLang = pathname?.startsWith('/es') ? 'es' : 'en' as LanguageCode
-    setLanguage(newLang)
-  }, [pathname])
+    if (pathname) {
+      const pathLanguage = pathname.startsWith('/es') ? 'es' : 'en'
+      if (pathLanguage !== language) {
+        setLanguage(pathLanguage)
+      }
+    }
+  }, [pathname, language])
   
   // Toggle language function
   const toggleLanguage = () => {
-    const newLanguage = language === 'en' ? 'es' : 'en' as LanguageCode
+    const newLanguage = language === 'en' ? 'es' : 'en'
     setLanguage(newLanguage)
     
     // Redirect to the equivalent page in the other language
