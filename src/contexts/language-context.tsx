@@ -254,12 +254,20 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
     
     // Redirect to the equivalent page in the other language
     if (pathname && isClient) {
-      if (language === 'en' && !pathname.startsWith('/es')) {
-        // Switching to Spanish, add /es prefix
-        router.push(`/es${pathname === '/' ? '' : pathname}`)
-      } else if (language === 'es' && pathname.startsWith('/es')) {
-        // Switching to English, remove /es prefix
-        router.push(pathname === '/es' ? '/' : pathname.substring(3))
+      if (newLanguage === 'es') {
+        // Switching to Spanish
+        if (pathname === '/') {
+          router.push('/es')
+        } else if (!pathname.startsWith('/es')) {
+          router.push(`/es${pathname}`)
+        }
+      } else {
+        // Switching to English
+        if (pathname === '/es') {
+          router.push('/')
+        } else if (pathname.startsWith('/es')) {
+          router.push(pathname.substring(3))
+        }
       }
     }
   }

@@ -53,7 +53,14 @@ export function Hero() {
           >
             <h1 className="text-center text-4xl font-bold leading-tight tracking-tighter md:text-left md:text-5xl lg:text-6xl">
               {t("hero.title")} <br className="hidden md:inline" />
-              <span className="logo-font text-6xl md:text-7xl tracking-wide">Tippsy</span>
+              <span 
+                className="logo-font text-6xl md:text-7xl tracking-wide" 
+                style={{ 
+                  fontFamily: "var(--font-mrs-sheppards)", 
+                  fontWeight: "normal",
+                  color: "var(--primary)"
+                }}
+              >Tippsy</span>
             </h1>
             <p className="mx-auto text-center text-lg text-muted-foreground md:mx-0 md:text-left md:text-xl">
               {t("hero.subtitle")}
@@ -123,7 +130,14 @@ export function Hero() {
                 {/* App Header */}
                 <div className="h-14 flex items-center justify-between px-4 border-b border-gray-200 dark:border-gray-800">
                   <div className="flex items-center">
-                    <span className="logo-font text-xl">Tippsy</span>
+                    <span 
+                      className="logo-font text-xl" 
+                      style={{ 
+                        fontFamily: "var(--font-mrs-sheppards)", 
+                        fontWeight: "normal",
+                        color: "var(--primary)"
+                      }}
+                    >Tippsy</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">

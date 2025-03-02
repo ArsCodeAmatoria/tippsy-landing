@@ -49,11 +49,11 @@ export function LanguageSelector() {
     // Handle path-based language switching for specific pages
     const currentPath = window.location.pathname
     
-    // Handle home page
+    // Handle home page - this is the critical fix
     if (currentPath === '/' || currentPath === '/es') {
-      if (lang.code === 'es') {
+      if (lang.code === 'es' && currentPath !== '/es') {
         window.location.href = '/es';
-      } else {
+      } else if (lang.code === 'en' && currentPath !== '/') {
         window.location.href = '/';
       }
       return;
@@ -62,9 +62,9 @@ export function LanguageSelector() {
     // Check if we're on an about page
     if (currentPath === '/about' || currentPath === '/about/es') {
       // Redirect to the proper language version
-      if (lang.code === 'es') {
+      if (lang.code === 'es' && currentPath !== '/about/es') {
         window.location.href = '/about/es';
-      } else {
+      } else if (lang.code === 'en' && currentPath !== '/about') {
         window.location.href = '/about';
       }
       return;
@@ -72,9 +72,9 @@ export function LanguageSelector() {
     
     // Check if we're on partner page
     if (currentPath === '/partner' || currentPath === '/partner/es') {
-      if (lang.code === 'es') {
+      if (lang.code === 'es' && currentPath !== '/partner/es') {
         window.location.href = '/partner/es';
-      } else {
+      } else if (lang.code === 'en' && currentPath !== '/partner') {
         window.location.href = '/partner';
       }
       return;
@@ -82,9 +82,9 @@ export function LanguageSelector() {
     
     // Check if we're on terms page
     if (currentPath === '/terms' || currentPath === '/terms/es') {
-      if (lang.code === 'es') {
+      if (lang.code === 'es' && currentPath !== '/terms/es') {
         window.location.href = '/terms/es';
-      } else {
+      } else if (lang.code === 'en' && currentPath !== '/terms') {
         window.location.href = '/terms';
       }
       return;
@@ -92,9 +92,9 @@ export function LanguageSelector() {
     
     // Check if we're on privacy page
     if (currentPath === '/privacy' || currentPath === '/privacy/es') {
-      if (lang.code === 'es') {
+      if (lang.code === 'es' && currentPath !== '/privacy/es') {
         window.location.href = '/privacy/es';
-      } else {
+      } else if (lang.code === 'en' && currentPath !== '/privacy') {
         window.location.href = '/privacy';
       }
       return;
