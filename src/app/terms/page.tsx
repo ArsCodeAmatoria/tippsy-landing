@@ -12,7 +12,9 @@ export default function TermsOfService() {
     <>
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-6 md:px-8 flex h-16 items-center justify-between">
-          <Logo />
+          <Link href="/">
+            <Logo />
+          </Link>
           <Link 
             href="/" 
             className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-primary"
