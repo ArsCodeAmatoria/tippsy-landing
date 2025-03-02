@@ -258,6 +258,24 @@ const Header: React.FC = () => {
             >
               {t("nav.contact")}
             </Link>
+            
+            {/* Privacy Policy */}
+            <Link 
+              href={isSpanish() ? "/privacy/es" : "/privacy"}
+              className={`font-medium text-xl transition-colors ${isLinkActive("/privacy") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200'}`}
+              onClick={toggleMobileMenu}
+            >
+              {isSpanish() ? "Política de Privacidad" : "Privacy Policy"}
+            </Link>
+            
+            {/* Terms of Service */}
+            <Link 
+              href={isSpanish() ? "/terms/es" : "/terms"}
+              className={`font-medium text-xl transition-colors ${isLinkActive("/terms") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200'}`}
+              onClick={toggleMobileMenu}
+            >
+              {isSpanish() ? "Términos de Servicio" : "Terms of Service"}
+            </Link>
           </nav>
           
           <div className="mt-auto pt-8 border-t border-gray-200 dark:border-gray-700 mt-8">
