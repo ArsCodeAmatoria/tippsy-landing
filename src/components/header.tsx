@@ -14,12 +14,18 @@ const Header: React.FC = () => {
   const { language, t, toggleLanguage, isSpanish } = useLanguage();
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
   
   // Add a state to track if the mobile menu is open
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   // Ref for the mobile menu container
   const mobileMenuRef = useRef<HTMLDivElement>(null);
+  
+  // Prevent hydration errors by only rendering full content after mount
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   
   // Handle scroll event to change header appearance
   useEffect(() => {
@@ -137,48 +143,62 @@ const Header: React.FC = () => {
   };
 
   // Helper to get section links based on language
-  const getFeaturesSectionPath = () => {
-    return isSpanish() ? "/es#features" : "/#features";
+  const getFeaturesSectionPath = () => isSpanish() ? "/es#features" : "/#features";
+
+  const getContactSectionPath = () => isSpanish() ? "/es#contact" : "/#contact";
+
+  // Use these simple placeholder functions during server rendering
+  const getFeaturesSectionPathForServer = () => "/#features";
+  const isSpanishForServer = () => false;
+  const tForServer = (key: string) => {
+    const defaultTranslations: Record<string, string> = {
+      "nav.features": "Features",
+      "nav.about": "About Us",
+      "nav.partner": "Partner With Us",
+      "nav.contact": "Contact"
+    };
+    return defaultTranslations[key] || key;
   };
 
-  const getContactSectionPath = () => {
-    return isSpanish() ? "/es#contact" : "/#contact";
-  };
+  // Use client-side functions only after mounting
+  const actualFeaturesSectionPath = () => mounted ? getFeaturesSectionPath() : getFeaturesSectionPathForServer();
+  const actualIsSpanish = () => mounted ? isSpanish() : isSpanishForServer();
+  const actualT = (key: string) => mounted ? t(key) : tForServer(key);
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-lg dark:bg-gray-900/90' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href={isSpanish() ? "/es" : "/"} className="flex items-center">
+          <Link href={mounted ? (isSpanish() ? "/es" : "/") : "/"} className="flex items-center">
             <Logo />
           </Link>
           
           {/* Desktop Menu - Hidden on mobile */}
           <nav className="hidden md:flex space-x-8 items-center">
             <Link 
-              href={getFeaturesSectionPath()}
+              href={mounted ? getFeaturesSectionPath() : "/#features"}
               className={`font-medium text-lg transition-colors ${isLinkActive("/#features") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200 hover:text-[#ff007F]'}`}
             >
-              {t("nav.features")}
+              {mounted ? t("nav.features") : "Features"}
             </Link>
             <Link 
-              href={isSpanish() ? "/about/es" : "/about"}
+              href={mounted ? (isSpanish() ? "/about/es" : "/about") : "/about"}
               className={`font-medium text-lg transition-colors ${isLinkActive("/about") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200 hover:text-[#ff007F]'}`}
             >
-              {t("nav.about")}
+              {mounted ? t("nav.about") : "About Us"}
             </Link>
             <Link 
-              href={isSpanish() ? "/partner/es" : "/partner"}
+              href={mounted ? (isSpanish() ? "/partner/es" : "/partner") : "/partner"}
               className={`font-medium text-lg transition-colors ${isLinkActive("/partner") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200 hover:text-[#ff007F]'}`}
             >
-              {t("nav.partner")}
+              {mounted ? t("nav.partner") : "Partner With Us"}
             </Link>
             <Link 
-              href={getContactSectionPath()}
+              href={mounted ? getContactSectionPath() : "/#contact"}
               className={`font-medium text-lg transition-colors ${isLinkActive("/#contact") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200 hover:text-[#ff007F]'}`}
             >
-              {t("nav.contact")}
+              {mounted ? t("nav.contact") : "Contact"}
             </Link>
             <div className="flex items-center space-x-2 ml-4">
               <LanguageSelector />
@@ -231,55 +251,55 @@ const Header: React.FC = () => {
           
           <nav className="flex flex-col space-y-6">
             <Link 
-              href={getFeaturesSectionPath()}
+              href={mounted ? getFeaturesSectionPath() : "/#features"}
               className={`font-medium text-xl transition-colors ${isLinkActive("/#features") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200'}`}
               onClick={toggleMobileMenu}
             >
-              {t("nav.features")}
+              {mounted ? t("nav.features") : "Features"}
             </Link>
             <Link 
-              href={isSpanish() ? "/about/es" : "/about"}
+              href={mounted ? (isSpanish() ? "/about/es" : "/about") : "/about"}
               className={`font-medium text-xl transition-colors ${isLinkActive("/about") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200'}`}
               onClick={toggleMobileMenu}
             >
-              {t("nav.about")}
+              {mounted ? t("nav.about") : "About Us"}
             </Link>
             <Link 
-              href={isSpanish() ? "/partner/es" : "/partner"}
+              href={mounted ? (isSpanish() ? "/partner/es" : "/partner") : "/partner"}
               className={`font-medium text-xl transition-colors ${isLinkActive("/partner") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200'}`}
               onClick={toggleMobileMenu}
             >
-              {t("nav.partner")}
+              {mounted ? t("nav.partner") : "Partner With Us"}
             </Link>
             <Link 
-              href={getContactSectionPath()}
+              href={mounted ? getContactSectionPath() : "/#contact"}
               className={`font-medium text-xl transition-colors ${isLinkActive("/#contact") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200'}`}
               onClick={toggleMobileMenu}
             >
-              {t("nav.contact")}
+              {mounted ? t("nav.contact") : "Contact"}
             </Link>
             
             {/* Privacy Policy */}
             <Link 
-              href={isSpanish() ? "/privacy/es" : "/privacy"}
+              href={mounted ? (isSpanish() ? "/privacy/es" : "/privacy") : "/privacy"}
               className={`font-medium text-xl transition-colors ${isLinkActive("/privacy") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200'}`}
               onClick={toggleMobileMenu}
             >
-              {isSpanish() ? "Política de Privacidad" : "Privacy Policy"}
+              {mounted ? (isSpanish() ? "Política de Privacidad" : "Privacy Policy") : "Privacy Policy"}
             </Link>
             
             {/* Terms of Service */}
             <Link 
-              href={isSpanish() ? "/terms/es" : "/terms"}
+              href={mounted ? (isSpanish() ? "/terms/es" : "/terms") : "/terms"}
               className={`font-medium text-xl transition-colors ${isLinkActive("/terms") ? 'text-[#ff007F]' : 'text-gray-800 dark:text-gray-200'}`}
               onClick={toggleMobileMenu}
             >
-              {isSpanish() ? "Términos de Servicio" : "Terms of Service"}
+              {mounted ? (isSpanish() ? "Términos de Servicio" : "Terms of Service") : "Terms of Service"}
             </Link>
           </nav>
           
           <div className="mt-auto pt-8 border-t border-gray-200 dark:border-gray-700 mt-8">
-            <p className="text-gray-500 dark:text-gray-400 text-sm mb-4">{t("footer.copyright")}</p>
+            <p className="text-gray-500 dark:text-gray-400 text-sm mb-4">{mounted ? t("footer.copyright") : "© 2024 Your Company. All rights reserved."}</p>
           </div>
         </div>
       </div>

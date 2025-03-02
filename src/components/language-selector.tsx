@@ -42,6 +42,8 @@ export function LanguageSelector() {
   }, [])
 
   const handleLanguageChange = (lang: Language) => {
+    if (!mounted) return; // Don't do anything if not mounted yet
+    
     setLanguage(lang.code)
     
     // Handle path-based language switching for specific pages
@@ -102,7 +104,8 @@ export function LanguageSelector() {
   // Avoid hydration issues by not rendering on server
   if (!mounted) {
     return (
-      <Button variant="ghost" size="icon" className="h-9 w-9 rounded-full opacity-0">
+      <Button variant="ghost" size="icon" className="h-9 w-9 rounded-full opacity-70">
+        <span className="text-lg">🇬🇧</span>
         <span className="sr-only">Loading language selector</span>
       </Button>
     )
