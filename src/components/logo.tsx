@@ -6,7 +6,9 @@ export function Logo() {
       <span 
         className="text-3xl md:text-5xl tracking-wide logo-font" 
         style={{ 
-          fontWeight: "normal"
+          fontFamily: "var(--font-mrs-sheppards)",
+          fontWeight: "normal",
+          color: "var(--primary)"
         }}
       >
         Tippsy
