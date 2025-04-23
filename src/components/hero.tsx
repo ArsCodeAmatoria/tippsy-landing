@@ -23,7 +23,7 @@ export function Hero() {
   }
 
   return (
-    <section className="relative overflow-hidden py-16 md:py-24 lg:py-32 bg-gray-900">
+    <section className="relative overflow-hidden py-20 md:py-32 bg-gradient-to-br from-primary/10 via-gray-900 to-amber-100/10 dark:from-gray-950 dark:via-gray-900 dark:to-primary/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between">
           <motion.div
@@ -32,7 +32,7 @@ export function Hero() {
             transition={{ duration: 0.5 }}
             className="max-w-3xl space-y-6 md:max-w-lg md:pl-4 md:pr-8 md:w-1/2"
           >
-            <h1 className="text-center text-4xl font-bold leading-tight tracking-tighter text-white md:text-left md:text-5xl lg:text-6xl">
+            <h1 className="text-center text-5xl font-extrabold leading-tight tracking-tighter md:text-left md:text-6xl lg:text-7xl bg-gradient-to-r from-primary to-amber-500 bg-clip-text text-transparent drop-shadow-xl animate-gradient-x">
               Find Your Vibe with <br className="hidden md:inline" />
               <span 
                 className="logo-font text-6xl md:text-7xl tracking-wide" 
@@ -46,7 +46,7 @@ export function Hero() {
             <p className="mx-auto text-center text-lg text-gray-300 md:mx-0 md:text-left md:text-xl">
               Connect with friends, discover the best bars, and enjoy exclusive drink deals - all in one app.
             </p>
-            <div className="rounded-lg border border-gray-700 bg-[#ff007F]/10 p-4 text-center md:text-left">
+            <div className="rounded-2xl border border-primary/10 bg-gradient-to-r from-primary/10 to-amber-100/30 dark:from-gray-800/80 dark:to-gray-900/70 shadow-xl p-6 text-center md:text-left mb-4">
               <p className="text-sm font-medium text-gray-200">
                 <span className="font-bold text-[#ff007F]">Coming Soon!</span> We're putting the finishing touches on our app.{" "}
                 <Link href="#contact" className="underline underline-offset-2 hover:text-[#ff007F]">
@@ -55,7 +55,7 @@ export function Hero() {
               </p>
             </div>
             <div className="flex flex-col items-center justify-center gap-4 md:items-start sm:flex-row">
-              <Button asChild size="lg" className="gap-2 bg-[#ff007F] hover:bg-[#d00068]">
+              <Button asChild size="lg" className="gap-2 bg-gradient-to-r from-primary to-amber-500 hover:from-amber-500 hover:to-primary text-white shadow-lg transition-all duration-200">
                 <Link href="#contact">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +76,7 @@ export function Hero() {
                   Join Waitlist
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" asChild className="border-gray-600 text-gray-200 hover:bg-gray-800 hover:text-gray-100">
+              <Button variant="outline" size="lg" asChild className="border-primary/40 text-gray-200 hover:bg-primary/10 hover:text-primary transition-all duration-200">
                 <Link href="#features">Learn More</Link>
               </Button>
             </div>

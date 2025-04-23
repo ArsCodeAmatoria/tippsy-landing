@@ -12,22 +12,18 @@ export default function TermsOfService() {
     <>
       
       
-      <main className="container mx-auto px-6 py-12 md:px-8 md:py-16">
-        <div className="mx-auto max-w-3xl">
-          <div className="mb-10 md:mb-16">
-            <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-4">
+      <main className="min-h-screen w-full bg-gradient-to-b from-white via-slate-50 to-primary/10 dark:from-gray-950 dark:via-gray-900 dark:to-primary/10 flex flex-col justify-center">
+        <div className="mx-auto max-w-3xl px-4 sm:px-8 py-12 md:py-20">
+          <div className="mb-12 md:mb-20 text-center">
+            <div className="inline-block rounded-full bg-gradient-to-r from-primary/20 to-primary/40 px-4 py-2 text-base font-semibold text-primary shadow-md mb-6">
               Legal
             </div>
-            <h1 className="text-4xl font-bold tracking-tight mb-6 md:text-5xl">Terms of Service</h1>
-            <p className="text-muted-foreground mb-4">Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
-            <div className="flex gap-3 mt-4">
-              <span className="text-sm font-semibold">English</span>
-              <Link href="/terms/es" className="text-sm text-primary hover:underline">Español</Link>
-            </div>
+            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-primary to-amber-500 bg-clip-text text-transparent drop-shadow-lg">Terms of Service</h1>
+            <p className="text-xl text-muted-foreground font-medium max-w-2xl mx-auto mb-4">Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
           </div>
           
-          <div className="prose prose-gray dark:prose-invert max-w-none prose-headings:scroll-mt-28 prose-headings:font-bold prose-h2:mt-10 prose-h2:text-2xl prose-h3:text-xl prose-img:rounded-md prose-img:border prose-img:bg-muted prose-pre:rounded-lg prose-pre:border dark:prose-p:text-gray-300 dark:prose-li:text-gray-300 dark:prose-strong:text-white dark:prose-a:text-primary">
-            <p className="lead text-lg dark:text-gray-200">
+          <section className="rounded-3xl shadow-2xl bg-white/90 dark:bg-gray-900/80 p-8 md:p-12 mb-16 border border-primary/10">
+            <p className="lead text-lg md:text-xl text-gray-700 dark:text-gray-200 font-medium">
               Please read these Terms of Service ("Terms", "Terms of Service") carefully before using 
               the Tippsy mobile application and website (the "Service") operated by Tippsy ("us", "we", or "our").
             </p>
@@ -44,14 +40,14 @@ export default function TermsOfService() {
               </p>
             </div>
             
-            <h2 id="age-requirements" className="text-primary-foreground">Age Requirements</h2>
+            <h2 id="age-requirements" className="text-2xl md:text-3xl font-bold text-primary mb-2">Age Requirements</h2>
             <div className="space-y-4">
               <p>
                 Tippsy is intended for users who are of legal drinking age in their respective locations. 
                 This is typically 21 years of age in the United States and 18 or 19 in many other countries.
               </p>
               
-              <div className="rounded-lg border bg-amber-50 dark:bg-amber-950/30 p-4 shadow-sm border-amber-200 dark:border-amber-900/50">
+              <div className="rounded-2xl border border-amber-200 dark:border-amber-900/50 bg-gradient-to-r from-amber-50/80 to-white/90 dark:from-amber-950/40 dark:to-gray-900/80 p-6 shadow-2xl mb-8">
                 <p className="font-medium mb-0">
                   <strong>By using Tippsy, you represent and warrant that you are of legal drinking age in your 
                   jurisdiction. We reserve the right to terminate your account if we discover that you are 
@@ -60,7 +56,7 @@ export default function TermsOfService() {
               </div>
             </div>
             
-            <h2 id="accounts" className="text-primary-foreground">Accounts</h2>
+            <h2 id="accounts" className="text-2xl md:text-3xl font-bold text-primary mb-2">Accounts</h2>
             <div className="space-y-4">
               <p>
                 When you create an account with us, you must provide information that is accurate, complete, 
@@ -78,7 +74,7 @@ export default function TermsOfService() {
               </div>
             </div>
             
-            <h2 id="user-content" className="text-primary-foreground">User Content</h2>
+            <h2 id="user-content" className="text-2xl md:text-3xl font-bold text-primary mb-2">User Content</h2>
             <div className="space-y-4">
               <p>
                 Our Service allows you to post, link, store, share and otherwise make available certain 
@@ -268,7 +264,7 @@ export default function TermsOfService() {
                 <a href="mailto:legal@tippsy.me" className="text-primary hover:underline font-medium text-lg">legal@tippsy.me</a>
               </p>
             </div>
-          </div>
+          </section>
         </div>
       </main>
     </>

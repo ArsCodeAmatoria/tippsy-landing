@@ -12,22 +12,18 @@ export default function PrivacyPolicy() {
     <>
       
       
-      <main className="container mx-auto px-6 py-12 md:px-8 md:py-16">
-        <div className="mx-auto max-w-3xl">
-          <div className="mb-10 md:mb-16">
-            <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-4">
+      <main className="min-h-screen w-full bg-gradient-to-b from-white via-slate-50 to-primary/10 dark:from-gray-950 dark:via-gray-900 dark:to-primary/10 flex flex-col justify-center">
+        <div className="mx-auto max-w-3xl px-4 sm:px-8 py-12 md:py-20">
+          <div className="mb-12 md:mb-20 text-center">
+            <div className="inline-block rounded-full bg-gradient-to-r from-primary/20 to-primary/40 px-4 py-2 text-base font-semibold text-primary shadow-md mb-6">
               Legal
             </div>
-            <h1 className="text-4xl font-bold tracking-tight mb-6 md:text-5xl">Privacy Policy</h1>
-            <p className="text-muted-foreground mb-4">Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
-            <div className="flex gap-3 mt-4">
-              <span className="text-sm font-semibold">English</span>
-              <Link href="/privacy/es" className="text-sm text-primary hover:underline">Español</Link>
-            </div>
+            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-primary to-amber-500 bg-clip-text text-transparent drop-shadow-lg">Privacy Policy</h1>
+            <p className="text-xl text-muted-foreground font-medium max-w-2xl mx-auto mb-4">Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
           </div>
           
-          <div className="prose prose-gray dark:prose-invert max-w-none prose-headings:scroll-mt-28 prose-headings:font-bold prose-h2:mt-10 prose-h2:text-2xl prose-h3:text-xl prose-img:rounded-md prose-img:border prose-img:bg-muted prose-pre:rounded-lg prose-pre:border dark:prose-p:text-gray-300 dark:prose-li:text-gray-300 dark:prose-strong:text-white dark:prose-a:text-primary">
-            <p className="lead text-lg dark:text-gray-200">
+          <section className="rounded-3xl shadow-2xl bg-white/90 dark:bg-gray-900/80 p-8 md:p-12 mb-16 border border-primary/10">
+            <p className="lead text-lg md:text-xl text-gray-700 dark:text-gray-200 font-medium">
               At Tippsy, we take your privacy seriously. This Privacy Policy explains how we collect, 
               use, disclose, and safeguard your information when you use our mobile application and website.
             </p>
@@ -37,9 +33,9 @@ export default function PrivacyPolicy() {
               please do not access the application.
             </p>
             
-            <h2 id="information-we-collect" className="text-primary-foreground">Information We Collect</h2>
+            <h2 id="information-we-collect" className="text-2xl md:text-3xl font-bold text-primary mb-2">Information We Collect</h2>
             
-            <h3 className="font-bold">Personal Data</h3>
+            <h3 className="text-xl font-semibold text-primary mb-2">Personal Data</h3>
             <p>
               We may collect personal information that you voluntarily provide to us when you:
             </p>
@@ -61,13 +57,13 @@ export default function PrivacyPolicy() {
               <li><strong>Location data</strong> - When using location-based features</li>
             </ul>
             
-            <h3 className="font-bold mt-8">Usage Data</h3>
+            <h3 className="text-xl font-semibold text-primary mt-8 mb-2">Usage Data</h3>
             <div className="space-y-4">
               <p>
                 We may also collect information that your browser or device sends whenever 
                 you visit our website or use our app:
               </p>
-              <div className="rounded-lg border p-4 bg-muted/40 dark:bg-gray-800/50 dark:border-gray-700">
+              <div className="rounded-2xl border border-primary/10 p-6 bg-gradient-to-r from-primary/5 to-amber-100/30 dark:from-gray-800/80 dark:to-gray-900/70 shadow-md mb-8">
                 <ul className="space-y-2 dark:text-gray-300">
                   <li><strong>IP address</strong> - Your device's internet protocol address</li>
                   <li><strong>Browser details</strong> - Type, version, and settings</li>
@@ -79,10 +75,10 @@ export default function PrivacyPolicy() {
               </div>
             </div>
             
-            <h2 id="how-we-use-your-information" className="text-primary-foreground">How We Use Your Information</h2>
+            <h2 id="how-we-use-your-information" className="text-2xl md:text-3xl font-bold text-primary mb-2">How We Use Your Information</h2>
             <div className="space-y-4">
               <p>We may use the information we collect for various purposes, including to:</p>
-              <div className="rounded-lg border p-4 bg-muted/40 dark:bg-gray-800/50 dark:border-gray-700">
+              <div className="rounded-2xl border border-primary/10 p-6 bg-gradient-to-r from-primary/5 to-amber-100/30 dark:from-gray-800/80 dark:to-gray-900/70 shadow-md mb-8">
                 <ul className="space-y-2 dark:text-gray-300 grid gap-2 md:grid-cols-2">
                   <li><strong>Provide our services</strong> - Delivering, maintaining, and improving our platform</li>
                   <li><strong>Personalize your experience</strong> - Creating and updating your account</li>
@@ -129,7 +125,7 @@ export default function PrivacyPolicy() {
             <h2 id="your-data-protection-rights" className="text-primary-foreground">Your Data Protection Rights</h2>
             <div className="space-y-4">
               <p>Depending on your location, you may have the following rights:</p>
-              <div className="rounded-lg border p-4 bg-muted/40 dark:bg-gray-800/50 dark:border-gray-700">
+              <div className="rounded-2xl border border-primary/10 p-6 bg-gradient-to-r from-primary/5 to-amber-100/30 dark:from-gray-800/80 dark:to-gray-900/70 shadow-md mb-8">
                 <ul className="space-y-2 dark:text-gray-300 grid gap-2 md:grid-cols-2">
                   <li><strong>Right to access</strong> - The right to access the personal information we have about you</li>
                   <li><strong>Right to rectification</strong> - The right to request correction of inaccurate personal information</li>
@@ -178,7 +174,7 @@ export default function PrivacyPolicy() {
                 changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. 
               </p>
               
-              <div className="rounded-lg border p-4 bg-muted/40 dark:bg-gray-800/50 dark:border-gray-700">
+              <div className="rounded-2xl border border-primary/10 p-6 bg-gradient-to-r from-primary/5 to-amber-100/30 dark:from-gray-800/80 dark:to-gray-900/70 shadow-md mb-8">
                 <p className="mb-0">
                   <strong>You are advised to review this Privacy Policy periodically for any changes.</strong> 
                   Changes to this Privacy Policy are effective when they are posted on this page.
@@ -186,7 +182,7 @@ export default function PrivacyPolicy() {
               </div>
             </div>
             
-            <div className="rounded-lg border bg-card p-6 shadow-sm mt-10 dark:bg-gray-900 dark:border-gray-800">
+            <div className="rounded-2xl border border-primary/10 p-6 bg-gradient-to-r from-primary/5 to-amber-100/30 dark:from-gray-800/80 dark:to-gray-900/70 shadow-md mt-10">
               <h2 id="contact-us" className="mt-0 font-bold text-2xl">Contact Us</h2>
               <p className="mb-2">
                 If you have any questions about this Privacy Policy, please contact us at:
@@ -195,7 +191,7 @@ export default function PrivacyPolicy() {
                 <a href="mailto:privacy@tippsy.me" className="text-primary hover:underline font-medium text-lg">privacy@tippsy.me</a>
               </p>
             </div>
-          </div>
+          </section>
         </div>
       </main>
     </>
