@@ -4,7 +4,6 @@ import { Mrs_Sheppards } from "next/font/google";
 import "./globals.css";
 
 import { Providers } from "./providers";
-import { LanguageProvider } from "@/contexts/language-context";
 import { generateMetadata } from "@/lib/metadata";
 
 const geistSans = Geist({
@@ -100,16 +99,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="dark">
       <head />
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${mrsSheppards.variable} antialiased`}
       >
-        <LanguageProvider>
-          <Providers>
-            {children}
-          </Providers>
-        </LanguageProvider>
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );

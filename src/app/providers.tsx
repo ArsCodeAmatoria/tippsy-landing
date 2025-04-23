@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import { ThemeProvider as NextThemesProvider } from "next-themes"
-import { LanguageProvider } from "@/contexts/language-context"
 
 type ThemeProviderProps = {
   children: React.ReactNode;
@@ -13,14 +12,12 @@ export function Providers({ children, ...props }: ThemeProviderProps) {
   return (
     <NextThemesProvider
       attribute="class"
-      defaultTheme="system"
-      enableSystem
+      defaultTheme="dark"
+      forcedTheme="dark"
       disableTransitionOnChange
       {...props}
     >
-      <LanguageProvider>
-        {children}
-      </LanguageProvider>
+      {children}
     </NextThemesProvider>
   )
 } 
