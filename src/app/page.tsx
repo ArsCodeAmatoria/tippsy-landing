@@ -1,4 +1,3 @@
-import Header from "@/components/header";
 import { Metadata } from "next";
 import { Hero } from "@/components/hero";
 import { Features } from "@/components/features";
@@ -12,14 +11,13 @@ export const metadata: Metadata = getHomeMetadata();
 export default function Home() {
   return (
     <>
-      <Header />
-      <main className="flex min-h-screen flex-col items-center">
+      <main className="flex min-h-screen flex-col w-full">
         <Hero />
         <Features />
         <CTA />
         <Contact />
       </main>
-      <Footer />
+
     </>
   );
 }

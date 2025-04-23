@@ -24,7 +24,7 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden py-16 md:py-24 lg:py-32 bg-gray-900">
-      <div className="container mx-auto px-6 md:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

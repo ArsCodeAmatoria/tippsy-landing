@@ -11,28 +11,7 @@ export const metadata: Metadata = getAboutMetadata();
 export default function AboutPage() {
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-6 md:px-8 flex h-16 items-center justify-between">
-          <Link href="/">
-            <Logo />
-          </Link>
-          <div className="flex items-center gap-4">
-            <Link 
-              href="/about/es" 
-              className="text-sm font-medium text-muted-foreground hover:text-primary"
-            >
-              Español
-            </Link>
-            <Link 
-              href="/" 
-              className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-primary"
-            >
-              <ArrowLeft className="h-4 w-4" /> Back to Home
-            </Link>
-          </div>
-        </div>
-      </header>
-      
+
       <main className="container mx-auto px-6 py-12 md:px-8 md:py-16">
         <div className="mx-auto max-w-3xl">
           <div className="mb-10 md:mb-16">
