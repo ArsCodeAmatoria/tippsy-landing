@@ -1,5 +1,9 @@
 # Tippsy Landing Page
 
+![Build Status](https://img.shields.io/github/actions/workflow/status/ArsCodeAmatoria/tippsy-landing/ci.yml?branch=main)
+![License](https://img.shields.io/github/license/ArsCodeAmatoria/tippsy-landing)
+![GitHub stars](https://img.shields.io/github/stars/ArsCodeAmatoria/tippsy-landing?style=social)
+
 A modern and minimalistic landing page for Tippsy, a social matchmaking and bar-finding app.
 
 ## Features
@@ -13,12 +17,15 @@ A modern and minimalistic landing page for Tippsy, a social matchmaking and bar-
 
 ## Tech Stack
 
-- **Next.js** - React framework for building the application
-- **Tailwind CSS** - Utility-first CSS framework for styling
-- **shadcn/ui** - Reusable UI components built with Radix UI and Tailwind CSS
-- **Framer Motion** - Animation library for React
-- **Lucide Icons** - Beautiful, consistent icons
-- **Google Fonts** - Mrs Sheppards font for the logo
+- **Next.js** – React framework for building the application
+- **React** – Component-based UI library
+- **Tailwind CSS** – Utility-first CSS framework for styling
+- **shadcn/ui** – Accessible UI components with Radix UI and Tailwind CSS
+- **Framer Motion** – Animation library for React
+- **Lucide Icons** – Beautiful, consistent icons
+- **Google Fonts** – Mrs Sheppards font for the logo
+- **Node.js & Rust** – Supporting backend technologies
+- **LLaMA AI** – Experimental AI integration
 
 ## Getting Started
 
